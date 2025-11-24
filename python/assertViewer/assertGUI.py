@@ -62,6 +62,7 @@ class assertGUI(pydm.Display):
         self.sizeY = macros['sizeY']
 
     def updateDisplay(self):
+        pass
 #        maxContrast = int(self.ui.PyDMLineEdit_5.displayText())
 #        minContrast = int(self.ui.PyDMLineEdit_4.displayText())
 #        self.ui.PyDMImageView.setColorMapLimits(minContrast, maxContrast)
@@ -70,6 +71,7 @@ class assertGUI(pydm.Display):
     #     self.ui.PyDMTimePlot.setTimeSpan(int(self.ui.lineEdit.text()))
 
     def clickProcess(self, event):
+        pass
 #        pos = self.ui.PyDMImageView.getView().getViewBox().mapSceneToView(event.scenePos())
 #        if self.sizeX != 0 and int(pos.x()) > self.sizeX :
 #            x = str(self.sizeX-1)
