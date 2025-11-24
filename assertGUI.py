@@ -51,8 +51,8 @@ class assertGUI(pydm.Display):
         super().__init__(parent=parent, args=args, macros=macros)
         # print(f'{macros=}')
         self._dataReceiver = macros['dataReceiver']
-        self.ui.PyDMImageView.newImageSignal.connect(self.updateDisplay)
-        self.ui.PyDMImageView.scene.sigMouseClicked.connect(self.clickProcess)
+#        self.ui.PyDMImageView.newImageSignal.connect(self.updateDisplay)
+#        self.ui.PyDMImageView.scene.sigMouseClicked.connect(self.clickProcess)
         # self.ui.PyDMLineEdit_3.textChanged.connect(self.resetTimePlot)
         # self.ui.PyDMLineEdit_6.textChanged.connect(self.resetTimePlot)
         # self.ui.lineEdit.textChanged.connect(self.setTimeSpan)
@@ -62,33 +62,33 @@ class assertGUI(pydm.Display):
         self.sizeY = macros['sizeY']
 
     def updateDisplay(self):
-        maxContrast = int(self.ui.PyDMLineEdit_5.displayText())
-        minContrast = int(self.ui.PyDMLineEdit_4.displayText())
-        self.ui.PyDMImageView.setColorMapLimits(minContrast, maxContrast)
+#        maxContrast = int(self.ui.PyDMLineEdit_5.displayText())
+#        minContrast = int(self.ui.PyDMLineEdit_4.displayText())
+#        self.ui.PyDMImageView.setColorMapLimits(minContrast, maxContrast)
 
     # def setTimeSpan(self):
     #     self.ui.PyDMTimePlot.setTimeSpan(int(self.ui.lineEdit.text()))
 
     def clickProcess(self, event):
-        pos = self.ui.PyDMImageView.getView().getViewBox().mapSceneToView(event.scenePos())
-        if self.sizeX != 0 and int(pos.x()) > self.sizeX :
-            x = str(self.sizeX-1)
-        elif int(pos.x()) < 0 :
-            x = str(0)
-        else :
-            x = str(int(pos.x()))
-
-        if self.sizeY != 0 and  int(pos.y()) > self.sizeY :
-            y = str(self.sizeY-1)
-        elif int(pos.y()) < 0 :
-            y = str(0)
-        else :
-            y = str(int(pos.y()))
-
-        self.ui.PyDMLineEdit_2.setText(x)
-        self.ui.PyDMLineEdit_2.send_value()
-        self.ui.PyDMLineEdit_6.setText(y)
-        self.ui.PyDMLineEdit_6.send_value()
+#        pos = self.ui.PyDMImageView.getView().getViewBox().mapSceneToView(event.scenePos())
+#        if self.sizeX != 0 and int(pos.x()) > self.sizeX :
+#            x = str(self.sizeX-1)
+#        elif int(pos.x()) < 0 :
+#            x = str(0)
+#        else :
+#            x = str(int(pos.x()))
+#
+#        if self.sizeY != 0 and  int(pos.y()) > self.sizeY :
+#            y = str(self.sizeY-1)
+#        elif int(pos.y()) < 0 :
+#            y = str(0)
+#        else :
+#            y = str(int(pos.y()))
+#
+#        self.ui.PyDMLineEdit_2.setText(x)
+#        self.ui.PyDMLineEdit_2.send_value()
+#        self.ui.PyDMLineEdit_6.setText(y)
+#        self.ui.PyDMLineEdit_6.send_value()
 
     # def resetTimePlot(self):
     #     self.ui.PyDMTimePlot.removeYChannel(self.ui.PyDMTimePlot.findCurve(
