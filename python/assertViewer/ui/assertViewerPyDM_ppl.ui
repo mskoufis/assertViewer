@@ -35,7 +35,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Channels&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;Channels&quot;, &quot;minRange&quot;: -36.85054464000001, &quot;maxRange&quot;: 36.85054464000001, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Channels&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -0.26, &quot;maxRange&quot;: 65.26, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -46,13 +46,16 @@
          <string>Counts</string>
         </stringlist>
        </property>
+       <property name="showLegend">
+        <bool>true</bool>
+       </property>
        <property name="curves">
         <stringlist>
-         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.ASIC2MaxCnt&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;Channels&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Channels&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;, &quot;redraw_mode&quot;: 0}</string>
+         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.ASIC3MaxCnt&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;Counts vs Channels&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Channels&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;, &quot;redraw_mode&quot;: 0}</string>
         </stringlist>
        </property>
        <property name="autoRangeX">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <property name="maxXRange">
         <double>3000.000000000000000</double>
@@ -75,7 +78,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Channels&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -35.43321600000001, &quot;maxRange&quot;: 35.43321600000001, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Channels&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -0.26, &quot;maxRange&quot;: 65.26, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -86,13 +89,16 @@
          <string>Counts</string>
         </stringlist>
        </property>
+       <property name="showLegend">
+        <bool>true</bool>
+       </property>
        <property name="curves">
         <stringlist>
-         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.ASIC6MaxCnt&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;Channels&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Channels&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;, &quot;redraw_mode&quot;: 0}</string>
+         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.ASIC3MaxCnt&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;Counts vs Channels&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Channels&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;, &quot;redraw_mode&quot;: 0}</string>
         </stringlist>
        </property>
        <property name="autoRangeX">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <property name="maxXRange">
         <double>3000.000000000000000</double>
@@ -167,7 +173,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Channels&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -35.43321600000001, &quot;maxRange&quot;: 35.43321600000001, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Channels&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -0.26, &quot;maxRange&quot;: 65.26, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -178,13 +184,16 @@
          <string>Counts</string>
         </stringlist>
        </property>
+       <property name="showLegend">
+        <bool>true</bool>
+       </property>
        <property name="curves">
         <stringlist>
-         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.ASIC4MaxCnt&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;Channels&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Channels&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;, &quot;redraw_mode&quot;: 0}</string>
+         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.ASIC3MaxCnt&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;Counts vs Channels&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Channels&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;, &quot;redraw_mode&quot;: 0}</string>
         </stringlist>
        </property>
        <property name="autoRangeX">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <property name="maxXRange">
         <double>3000.000000000000000</double>
@@ -207,7 +216,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Channels&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -35.43321600000001, &quot;maxRange&quot;: 35.43321600000001, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Channels&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -0.26, &quot;maxRange&quot;: 65.26, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -218,13 +227,16 @@
          <string>Counts</string>
         </stringlist>
        </property>
+       <property name="showLegend">
+        <bool>true</bool>
+       </property>
        <property name="curves">
         <stringlist>
-         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.ASIC7MaxCnt&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;Channels&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Channels&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;, &quot;redraw_mode&quot;: 0}</string>
+         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.ASIC3MaxCnt&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;Counts vs Channels&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Channels&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;, &quot;redraw_mode&quot;: 0}</string>
         </stringlist>
        </property>
        <property name="autoRangeX">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <property name="maxXRange">
         <double>3000.000000000000000</double>
@@ -247,7 +259,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Channels&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -36.85054464000001, &quot;maxRange&quot;: 36.85054464000001, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Channels&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -0.26, &quot;maxRange&quot;: 65.26, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -258,13 +270,16 @@
          <string>Counts</string>
         </stringlist>
        </property>
+       <property name="showLegend">
+        <bool>true</bool>
+       </property>
        <property name="curves">
         <stringlist>
-         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.ASIC3MaxCnt&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;Channels&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Channels&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;, &quot;redraw_mode&quot;: 0}</string>
+         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.ASIC3MaxCnt&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;Counts vs Channels&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Channels&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;, &quot;redraw_mode&quot;: 0}</string>
         </stringlist>
        </property>
        <property name="autoRangeX">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <property name="maxXRange">
         <double>3000.000000000000000</double>
@@ -287,7 +302,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Channels&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -36.85054464000001, &quot;maxRange&quot;: 36.85054464000001, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Channels&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -0.26, &quot;maxRange&quot;: 65.26, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -298,13 +313,16 @@
          <string>Counts</string>
         </stringlist>
        </property>
+       <property name="showLegend">
+        <bool>true</bool>
+       </property>
        <property name="curves">
         <stringlist>
-         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.ASIC1MaxCnt&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;Channels&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Channels&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;, &quot;redraw_mode&quot;: 0}</string>
+         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.ASIC3MaxCnt&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;Counts vs Channels&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Channels&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;, &quot;redraw_mode&quot;: 0}</string>
         </stringlist>
        </property>
        <property name="autoRangeX">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <property name="maxXRange">
         <double>3000.000000000000000</double>
@@ -397,7 +415,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Channels&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;&quot;, &quot;minRange&quot;: -38.324566425600004, &quot;maxRange&quot;: 38.324566425600004, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Channels&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -0.26, &quot;maxRange&quot;: 65.26, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -408,16 +426,22 @@
          <string>Counts</string>
         </stringlist>
        </property>
+       <property name="showLegend">
+        <bool>true</bool>
+       </property>
        <property name="curves">
         <stringlist>
-         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.ASIC0MaxCnt&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;Channels&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Channels&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;, &quot;redraw_mode&quot;: 0}</string>
+         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.ASIC3MaxCnt&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;Counts vs Channels&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Channels&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;, &quot;redraw_mode&quot;: 0}</string>
         </stringlist>
        </property>
        <property name="autoRangeX">
-        <bool>false</bool>
+        <bool>true</bool>
+       </property>
+       <property name="minXRange">
+        <double>-1500.000000000000000</double>
        </property>
        <property name="maxXRange">
-        <double>3000.000000000000000</double>
+        <double>1500.000000000000000</double>
        </property>
        <property name="autoRangeY">
         <bool>false</bool>
@@ -437,7 +461,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Channels&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -35.43321600000001, &quot;maxRange&quot;: 35.43321600000001, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Channels&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -0.26, &quot;maxRange&quot;: 65.26, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -448,13 +472,16 @@
          <string>Counts</string>
         </stringlist>
        </property>
+       <property name="showLegend">
+        <bool>true</bool>
+       </property>
        <property name="curves">
         <stringlist>
-         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.ASIC5MaxCnt&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;Channels&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Channels&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;, &quot;redraw_mode&quot;: 0}</string>
+         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.ASIC3MaxCnt&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;Counts vs Channels&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Channels&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;, &quot;redraw_mode&quot;: 0}</string>
         </stringlist>
        </property>
        <property name="autoRangeX">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <property name="maxXRange">
         <double>3000.000000000000000</double>
