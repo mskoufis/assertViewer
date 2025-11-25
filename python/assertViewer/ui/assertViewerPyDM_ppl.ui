@@ -70,7 +70,9 @@
         <string/>
        </property>
        <property name="yAxes">
-        <stringlist/>
+        <stringlist>
+         <string>{&quot;name&quot;: &quot;Channels&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -0.26, &quot;maxRange&quot;: 65.26, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+        </stringlist>
        </property>
        <property name="title" stdset="0">
         <string>Y Coordinates - Plane 6</string>
@@ -81,7 +83,9 @@
         </stringlist>
        </property>
        <property name="curves">
-        <stringlist/>
+        <stringlist>
+         <string>{&quot;y_channel&quot;: null, &quot;x_channel&quot;: &quot;ASIC5MaxCnt&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;Channels&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Channels&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;, &quot;redraw_mode&quot;: 2}</string>
+        </stringlist>
        </property>
        <property name="autoRangeX">
         <bool>false</bool>
@@ -112,7 +116,9 @@
         <bool>false</bool>
        </property>
        <property name="yAxes">
-        <stringlist/>
+        <stringlist>
+         <string>{&quot;name&quot;: &quot;Channels&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -0.26, &quot;maxRange&quot;: 65.26, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+        </stringlist>
        </property>
        <property name="title" stdset="0">
         <string>X Coordinates - Plane 1</string>
@@ -123,7 +129,9 @@
         </stringlist>
        </property>
        <property name="curves">
-        <stringlist/>
+        <stringlist>
+         <string>{&quot;y_channel&quot;: null, &quot;x_channel&quot;: &quot;{dataReceiver}.ASIC0MaxCnt&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;Channels&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Channels&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;, &quot;redraw_mode&quot;: 2}</string>
+        </stringlist>
        </property>
        <property name="autoRangeX">
         <bool>false</bool>
@@ -184,7 +192,9 @@
         <string/>
        </property>
        <property name="yAxes">
-        <stringlist/>
+        <stringlist>
+         <string>{&quot;name&quot;: &quot;Channels&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;Channels&quot;, &quot;minRange&quot;: -1.5704000000000002, &quot;maxRange&quot;: 66.5704, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+        </stringlist>
        </property>
        <property name="title" stdset="0">
         <string>X Coordinates - Plane 3</string>
@@ -195,7 +205,9 @@
         </stringlist>
        </property>
        <property name="curves">
-        <stringlist/>
+        <stringlist>
+         <string>{&quot;y_channel&quot;: null, &quot;x_channel&quot;: &quot;ASIC2MaxCnt&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;Channels&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Channels&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;, &quot;redraw_mode&quot;: 2}</string>
+        </stringlist>
        </property>
        <property name="autoRangeX">
         <bool>false</bool>
@@ -220,7 +232,9 @@
         <string/>
        </property>
        <property name="yAxes">
-        <stringlist/>
+        <stringlist>
+         <string>{&quot;name&quot;: &quot;Channels&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -0.26, &quot;maxRange&quot;: 65.26, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+        </stringlist>
        </property>
        <property name="title" stdset="0">
         <string>X Coordinates - Plane 7</string>
@@ -231,7 +245,9 @@
         </stringlist>
        </property>
        <property name="curves">
-        <stringlist/>
+        <stringlist>
+         <string>{&quot;y_channel&quot;: null, &quot;x_channel&quot;: &quot;ASIC6MaxCnt&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;Channels&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Channels&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;, &quot;redraw_mode&quot;: 2}</string>
+        </stringlist>
        </property>
        <property name="autoRangeX">
         <bool>false</bool>
@@ -444,7 +460,9 @@
         <string/>
        </property>
        <property name="yAxes">
-        <stringlist/>
+        <stringlist>
+         <string>{&quot;name&quot;: &quot;Channels&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -0.26, &quot;maxRange&quot;: 65.26, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+        </stringlist>
        </property>
        <property name="title" stdset="0">
         <string>Y Coordinates - Plane 8</string>
@@ -455,7 +473,9 @@
         </stringlist>
        </property>
        <property name="curves">
-        <stringlist/>
+        <stringlist>
+         <string>{&quot;y_channel&quot;: null, &quot;x_channel&quot;: &quot;ASIC7MaxCnt&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;Channels&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Channels&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;, &quot;redraw_mode&quot;: 2}</string>
+        </stringlist>
        </property>
        <property name="autoRangeX">
         <bool>false</bool>
@@ -516,7 +536,9 @@
         <string/>
        </property>
        <property name="yAxes">
-        <stringlist/>
+        <stringlist>
+         <string>{&quot;name&quot;: &quot;Channels&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -0.26, &quot;maxRange&quot;: 65.26, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+        </stringlist>
        </property>
        <property name="title" stdset="0">
         <string>Y Coordinates - Plane 4</string>
@@ -527,7 +549,9 @@
         </stringlist>
        </property>
        <property name="curves">
-        <stringlist/>
+        <stringlist>
+         <string>{&quot;y_channel&quot;: null, &quot;x_channel&quot;: &quot;ASIC3MaxCnt&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;Channels&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Channels&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;, &quot;redraw_mode&quot;: 2}</string>
+        </stringlist>
        </property>
        <property name="autoRangeX">
         <bool>false</bool>
@@ -552,7 +576,9 @@
         <string/>
        </property>
        <property name="yAxes">
-        <stringlist/>
+        <stringlist>
+         <string>{&quot;name&quot;: &quot;Channels&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -1.4072, &quot;maxRange&quot;: 62.4072, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+        </stringlist>
        </property>
        <property name="title" stdset="0">
         <string>Y Coordinates - Plane 2</string>
@@ -563,7 +589,9 @@
         </stringlist>
        </property>
        <property name="curves">
-        <stringlist/>
+        <stringlist>
+         <string>{&quot;y_channel&quot;: null, &quot;x_channel&quot;: &quot;ASIC1MaxCnt&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;Channels&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Channels&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;, &quot;redraw_mode&quot;: 2}</string>
+        </stringlist>
        </property>
        <property name="autoRangeX">
         <bool>false</bool>
@@ -624,7 +652,9 @@
         <string/>
        </property>
        <property name="yAxes">
-        <stringlist/>
+        <stringlist>
+         <string>{&quot;name&quot;: &quot;Channels&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -0.26, &quot;maxRange&quot;: 65.26, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+        </stringlist>
        </property>
        <property name="title" stdset="0">
         <string>X Coordinates - Plane 5</string>
@@ -635,7 +665,9 @@
         </stringlist>
        </property>
        <property name="curves">
-        <stringlist/>
+        <stringlist>
+         <string>{&quot;y_channel&quot;: null, &quot;x_channel&quot;: &quot;ASIC4MaxCnt&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;Channels&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Channels&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;, &quot;redraw_mode&quot;: 2}</string>
+        </stringlist>
        </property>
        <property name="autoRangeX">
         <bool>false</bool>
