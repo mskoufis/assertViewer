@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>2311</width>
-    <height>1287</height>
+    <width>2616</width>
+    <height>1313</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -41,7 +41,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -7.439411727142613, &quot;maxRange&quot;: 7.439411727142613, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -7.736988196228317, &quot;maxRange&quot;: 7.736988196228317, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -90,7 +90,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -7.153280506867897, &quot;maxRange&quot;: 7.153280506867897, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -7.439411727142613, &quot;maxRange&quot;: 7.439411727142613, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -139,7 +139,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -7.736988196228317, &quot;maxRange&quot;: 7.736988196228317, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -8.04646772407745, &quot;maxRange&quot;: 8.04646772407745, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -191,7 +191,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -7.153280506867897, &quot;maxRange&quot;: 7.153280506867897, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -7.439411727142613, &quot;maxRange&quot;: 7.439411727142613, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -240,7 +240,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -6.878154333526823, &quot;maxRange&quot;: 6.878154333526823, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -7.153280506867897, &quot;maxRange&quot;: 7.153280506867897, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -289,7 +289,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -6.878154333526823, &quot;maxRange&quot;: 6.878154333526823, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -7.153280506867897, &quot;maxRange&quot;: 7.153280506867897, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -338,7 +338,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -7.153280506867897, &quot;maxRange&quot;: 7.153280506867897, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -7.439411727142613, &quot;maxRange&quot;: 7.439411727142613, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -387,7 +387,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -6.878154333526823, &quot;maxRange&quot;: 6.878154333526823, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -7.153280506867897, &quot;maxRange&quot;: 7.153280506867897, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -423,7 +423,7 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="4" rowspan="2">
+     <item row="0" column="4">
       <widget class="PyDMTabWidget" name="PyDMTabWidget">
        <property name="toolTip">
         <string/>
@@ -493,12 +493,12 @@
           <rect>
            <x>10</x>
            <y>20</y>
-           <width>411</width>
+           <width>501</width>
            <height>20</height>
           </rect>
          </property>
          <property name="text">
-          <string>Plotted counts are raw data. Select below to REMOVE noise components.</string>
+          <string>Plotted counts are by default raw data. Select below to REMOVE noise components.</string>
          </property>
         </widget>
        </widget>
