@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>2616</width>
-    <height>1313</height>
+    <width>2633</width>
+    <height>1322</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -29,7 +29,7 @@
    <item row="0" column="0">
     <layout class="QGridLayout" name="gridLayout">
      <item row="1" column="1">
-      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_12">
+      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_4">
        <property name="toolTip">
         <string/>
        </property>
@@ -78,7 +78,7 @@
       </widget>
      </item>
      <item row="0" column="3">
-      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_8">
+      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_7">
        <property name="toolTip">
         <string/>
        </property>
@@ -127,7 +127,7 @@
       </widget>
      </item>
      <item row="0" column="0">
-      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot">
+      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_1">
        <property name="toolTip">
         <string/>
        </property>
@@ -179,7 +179,7 @@
       </widget>
      </item>
      <item row="1" column="0">
-      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_10">
+      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_2">
        <property name="toolTip">
         <string/>
        </property>
@@ -228,7 +228,7 @@
       </widget>
      </item>
      <item row="1" column="2">
-      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_14">
+      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_6">
        <property name="toolTip">
         <string/>
        </property>
@@ -277,7 +277,7 @@
       </widget>
      </item>
      <item row="1" column="3">
-      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_16">
+      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_8">
        <property name="toolTip">
         <string/>
        </property>
@@ -326,7 +326,7 @@
       </widget>
      </item>
      <item row="0" column="2">
-      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_6">
+      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_5">
        <property name="toolTip">
         <string/>
        </property>
@@ -375,7 +375,7 @@
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_4">
+      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_3">
        <property name="toolTip">
         <string/>
        </property>
@@ -440,7 +440,7 @@
         <attribute name="title">
          <string>ADC Count Configuration</string>
         </attribute>
-        <widget class="PyDMCheckbox" name="PyDMCheckbox_3">
+        <widget class="PyDMCheckbox" name="PyDMCheckbox_noise">
          <property name="geometry">
           <rect>
            <x>0</x>
@@ -456,7 +456,7 @@
           <string>Noise</string>
          </property>
         </widget>
-        <widget class="PyDMCheckbox" name="PyDMCheckbox_4">
+        <widget class="PyDMCheckbox" name="PyDMCheckbox_pedestals">
          <property name="geometry">
           <rect>
            <x>0</x>
@@ -472,7 +472,7 @@
           <string>Pedestals</string>
          </property>
         </widget>
-        <widget class="PyDMCheckbox" name="PyDMCheckbox_5">
+        <widget class="PyDMCheckbox" name="PyDMCheckbox_cm">
          <property name="geometry">
           <rect>
            <x>0</x>
@@ -498,9 +498,29 @@
           </rect>
          </property>
          <property name="text">
-          <string>Plotted counts are by default raw data. Select below to REMOVE noise components.</string>
+          <string>Plotted counts are by default RAW data. Select below to REMOVE signal components.</string>
          </property>
         </widget>
+       </widget>
+      </widget>
+     </item>
+     <item row="1" column="4">
+      <widget class="PyDMTabWidget" name="PyDMTabWidget_2">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="alarmChannels">
+        <stringlist>
+         <string></string>
+        </stringlist>
+       </property>
+       <widget class="QWidget" name="tab_2">
+        <attribute name="title">
+         <string/>
+        </attribute>
        </widget>
       </widget>
      </item>
