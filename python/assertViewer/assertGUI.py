@@ -6,6 +6,7 @@
 
 import os
 import pydm
+from qtpy.QtWidgets import QWidget, QLabel, QGridLayout, QVBoxLayout
 
 def runReceiverDisplay(dataReceiver, serverList='localhost:9090', root=None,
                    title=None,sizeX=800,sizeY=1000,maxListExpand=5,maxListSize=100):
@@ -60,13 +61,22 @@ class assertGUI(pydm.Display):
         # self.ui.pushButton.clicked.connect(self.resetTimePlot)
         self.sizeX = macros['sizeX']
         self.sizeY = macros['sizeY']
-        self.setup_update_options()
-        self.setup_display_options()
+        self.setup_update()
+        self.setup_display()
 
-    def setup_update_options(self):
+    def setup_update(self):
         #self.ui.PyDMLineEdit_3.textChanged.connect(self.resetTimePlot)
+        #self.ui.PyDMLineEdit.channel=f'{self._dataReceiver}.ASIC0FrameCnt'
+        grid_layout=QGridLayout()
+        label=QLabel(f'Frame Count 2')
+        #lineEdit=PyDMLineEdit(init_channel=f'{self._dataReceiver}.ASIC0FrameCnt')
+        #lineEdit=PyDMLineEdit()
+        grid_layout.addWidget(label,1,0)
+        #grid_layout.addWidget(lineEdit,1,1)
+        self.ui.PyDMTabWidget_main.setLayout(grid_layout)
+        pass
 
-    def setup_display_options(self):
+    def setup_display(self):
         self.ui.PyDMCheckbox_noise.clicked.connect(self.onClick_updatePlots)
         self.ui.PyDMCheckbox_pedestals.clicked.connect(self.onClick_updatePlots)
         self.ui.PyDMCheckbox_cm.clicked.connect(self.onClick_updatePlots)

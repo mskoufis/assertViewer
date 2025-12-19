@@ -41,7 +41,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -8.04646772407745, &quot;maxRange&quot;: 8.04646772407745, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -9.051181869976658, &quot;maxRange&quot;: 9.051181869976658, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -90,7 +90,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -8.04646772407745, &quot;maxRange&quot;: 8.04646772407745, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -9.051181869976658, &quot;maxRange&quot;: 9.051181869976658, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -139,7 +139,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -7.736988196228317, &quot;maxRange&quot;: 7.736988196228317, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -8.70305949036217, &quot;maxRange&quot;: 8.70305949036217, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -188,7 +188,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -8.368326433040549, &quot;maxRange&quot;: 8.368326433040549, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -9.413229144775723, &quot;maxRange&quot;: 9.413229144775723, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -237,7 +237,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -7.736988196228317, &quot;maxRange&quot;: 7.736988196228317, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -8.70305949036217, &quot;maxRange&quot;: 8.70305949036217, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -286,7 +286,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -8.70305949036217, &quot;maxRange&quot;: 8.70305949036217, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -9.789758310566752, &quot;maxRange&quot;: 9.789758310566752, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -338,7 +338,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -8.04646772407745, &quot;maxRange&quot;: 8.04646772407745, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -9.051181869976658, &quot;maxRange&quot;: 9.051181869976658, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -375,7 +375,7 @@
       </widget>
      </item>
      <item row="1" column="4">
-      <widget class="PyDMTabWidget" name="PyDMTabWidget">
+      <widget class="PyDMTabWidget" name="PyDMTabWidget_config">
        <property name="toolTip">
         <string/>
        </property>
@@ -389,11 +389,31 @@
        </property>
        <widget class="QWidget" name="tab">
         <attribute name="title">
-         <string>Plot Configuration</string>
+         <string>Configuration</string>
         </attribute>
         <layout class="QGridLayout" name="gridLayout_6">
          <item row="4" column="1">
           <layout class="QGridLayout" name="gridLayout_5">
+           <item row="5" column="0">
+            <spacer name="verticalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>Plotted counts are by default RAW data. Check boxes below to REMOVE signal components.</string>
+             </property>
+            </widget>
+           </item>
            <item row="1" column="0">
             <widget class="PyDMCheckbox" name="PyDMCheckbox_noise">
              <property name="toolTip">
@@ -401,16 +421,6 @@
              </property>
              <property name="text">
               <string>Noise</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="PyDMCheckbox" name="PyDMCheckbox_pedestals">
-             <property name="toolTip">
-              <string/>
-             </property>
-             <property name="text">
-              <string>Pedestals</string>
              </property>
             </widget>
            </item>
@@ -424,25 +434,15 @@
              </property>
             </widget>
            </item>
-           <item row="0" column="0">
-            <widget class="QLabel" name="label">
+           <item row="2" column="0">
+            <widget class="PyDMCheckbox" name="PyDMCheckbox_pedestals">
+             <property name="toolTip">
+              <string/>
+             </property>
              <property name="text">
-              <string>Plotted counts are by default RAW data. Check boxes below to REMOVE signal components.</string>
+              <string>Pedestals</string>
              </property>
             </widget>
-           </item>
-           <item row="5" column="0">
-            <spacer name="verticalSpacer_2">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>40</height>
-              </size>
-             </property>
-            </spacer>
            </item>
           </layout>
          </item>
@@ -463,7 +463,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -7.736988196228317, &quot;maxRange&quot;: 7.736988196228317, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -8.70305949036217, &quot;maxRange&quot;: 8.70305949036217, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -500,7 +500,7 @@
       </widget>
      </item>
      <item row="0" column="4">
-      <widget class="PyDMTabWidget" name="PyDMTabWidget_2">
+      <widget class="PyDMTabWidget" name="PyDMTabWidget_main">
        <property name="toolTip">
         <string/>
        </property>
@@ -528,14 +528,7 @@
               <bool>true</bool>
              </property>
              <property name="channel">
-              <string>${dataReceiver}.ASIC0FrameCnt</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="0">
-            <widget class="QLabel" name="label_2">
-             <property name="text">
-              <string>Frame Count</string>
+              <string/>
              </property>
             </widget>
            </item>
@@ -551,6 +544,13 @@
               </size>
              </property>
             </spacer>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>Frame Count</string>
+             </property>
+            </widget>
            </item>
           </layout>
          </item>
