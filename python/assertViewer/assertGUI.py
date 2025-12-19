@@ -60,6 +60,47 @@ class assertGUI(pydm.Display):
         # self.ui.pushButton.clicked.connect(self.resetTimePlot)
         self.sizeX = macros['sizeX']
         self.sizeY = macros['sizeY']
+        self.setup_update_options()
+        self.setup_display_options()
+
+    def setup_update_options(self):
+        #self.ui.PyDMLineEdit_3.textChanged.connect(self.resetTimePlot)
+
+    def setup_display_options(self):
+        self.ui.PyDMCheckbox_noise.clicked.connect(self.onClick_updatePlots)
+        self.ui.PyDMCheckbox_pedestals.clicked.connect(self.onClick_updatePlots)
+        self.ui.PyDMCheckbox_cm.clicked.connect(self.onClick_updatePlots)
+
+    def onClick_updatePlots(self):
+        # Read current plot settings and update plots
+        noise_checkbox     = self.ui.PyDMCheckbox_noise 
+        pedestals_checkbox = self.ui.PyDMCheckbox_pedestals
+        cm_checkbox        = self.ui.PyDMCheckbox_cm
+
+        # Redraw the ADC counts on all sensor planes
+        # Check to see if the frame count has incremented
+        # If it has, then reset all plots and redraw the counts
+        # Assuming all count combinations exist as rogue variables already
+        # And also that the framecount is parsed out and stored in a rogue variable
+        # The checkboxes determine which channel we add to the plot each time
+
+        # Depending on the configuration, update the curves with the appropriate counts  
+        if noise_checkbox.isChecked() and pedestals_checkbox.isChecked() and cm_checkbox.isChecked():
+            pass
+        elif noise_checkbox.isChecked() and pedestals_checkbox.isChecked():
+            pass
+        elif noise_checkbox.isChecked() and cm_checkbox.isChecked():
+            pass
+        elif pedestals_checkbox.isChecked() and cm_checkbox.isChecked():
+            pass
+        elif noise_checkbox.isChecked():
+            pass
+        elif pedestals_checkbox.isChecked():
+            pass
+        elif cm_checkbox.isChecked():
+            pass
+        else:
+            pass
 
     def updateDisplay(self):
         pass
