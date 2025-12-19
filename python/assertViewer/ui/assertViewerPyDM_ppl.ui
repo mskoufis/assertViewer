@@ -28,8 +28,8 @@
   <layout class="QGridLayout" name="gridLayout_2">
    <item row="0" column="0">
     <layout class="QGridLayout" name="gridLayout">
-     <item row="1" column="1">
-      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_4">
+     <item row="1" column="0">
+      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_2">
        <property name="toolTip">
         <string/>
        </property>
@@ -45,7 +45,7 @@
         </stringlist>
        </property>
        <property name="title" stdset="0">
-        <string>Y Coordinates - Plane 4</string>
+        <string>Y Coordinates - Plane 2</string>
        </property>
        <property name="xLabels">
         <stringlist>
@@ -57,7 +57,7 @@
        </property>
        <property name="curves">
         <stringlist>
-         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.ASIC3MaxCnt&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;ADC Counts&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Counts&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;yellow&quot;, &quot;redraw_mode&quot;: 2}</string>
+         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.ASIC1MaxCnt&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;ADC Counts&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Counts&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;yellow&quot;, &quot;redraw_mode&quot;: 2}</string>
         </stringlist>
        </property>
        <property name="autoRangeX">
@@ -90,7 +90,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -7.439411727142613, &quot;maxRange&quot;: 7.439411727142613, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -7.736988196228317, &quot;maxRange&quot;: 7.736988196228317, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -126,6 +126,153 @@
        </property>
       </widget>
      </item>
+     <item row="0" column="1">
+      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_3">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="showXGrid">
+        <bool>true</bool>
+       </property>
+       <property name="showYGrid">
+        <bool>true</bool>
+       </property>
+       <property name="yAxes">
+        <stringlist>
+         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -7.439411727142613, &quot;maxRange&quot;: 7.439411727142613, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+        </stringlist>
+       </property>
+       <property name="title" stdset="0">
+        <string>X Coordinates - Plane 3</string>
+       </property>
+       <property name="xLabels">
+        <stringlist>
+         <string>Channel Index</string>
+        </stringlist>
+       </property>
+       <property name="showLegend">
+        <bool>true</bool>
+       </property>
+       <property name="curves">
+        <stringlist>
+         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.ASIC2MaxCnt&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;ADC Counts&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Counts&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;yellow&quot;, &quot;redraw_mode&quot;: 2}</string>
+        </stringlist>
+       </property>
+       <property name="autoRangeX">
+        <bool>true</bool>
+       </property>
+       <property name="maxXRange">
+        <double>1.000000000000000</double>
+       </property>
+       <property name="autoRangeY">
+        <bool>true</bool>
+       </property>
+       <property name="minYRange">
+        <double>0.000000000000000</double>
+       </property>
+       <property name="maxYRange">
+        <double>1.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_4">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="showXGrid">
+        <bool>true</bool>
+       </property>
+       <property name="showYGrid">
+        <bool>true</bool>
+       </property>
+       <property name="yAxes">
+        <stringlist>
+         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -8.04646772407745, &quot;maxRange&quot;: 8.04646772407745, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+        </stringlist>
+       </property>
+       <property name="title" stdset="0">
+        <string>Y Coordinates - Plane 4</string>
+       </property>
+       <property name="xLabels">
+        <stringlist>
+         <string>Channel Index</string>
+        </stringlist>
+       </property>
+       <property name="showLegend">
+        <bool>true</bool>
+       </property>
+       <property name="curves">
+        <stringlist>
+         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.ASIC3MaxCnt&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;ADC Counts&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Counts&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;yellow&quot;, &quot;redraw_mode&quot;: 2}</string>
+        </stringlist>
+       </property>
+       <property name="autoRangeX">
+        <bool>true</bool>
+       </property>
+       <property name="maxXRange">
+        <double>1.000000000000000</double>
+       </property>
+       <property name="autoRangeY">
+        <bool>true</bool>
+       </property>
+       <property name="minYRange">
+        <double>0.000000000000000</double>
+       </property>
+       <property name="maxYRange">
+        <double>1.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_6">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="showXGrid">
+        <bool>true</bool>
+       </property>
+       <property name="showYGrid">
+        <bool>true</bool>
+       </property>
+       <property name="yAxes">
+        <stringlist>
+         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -7.439411727142613, &quot;maxRange&quot;: 7.439411727142613, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+        </stringlist>
+       </property>
+       <property name="title" stdset="0">
+        <string>Y Coordinates - Plane 6</string>
+       </property>
+       <property name="xLabels">
+        <stringlist>
+         <string>Channel Index</string>
+        </stringlist>
+       </property>
+       <property name="showLegend">
+        <bool>true</bool>
+       </property>
+       <property name="curves">
+        <stringlist>
+         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.ASIC5MaxCnt&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;ADC Counts&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Counts&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;yellow&quot;, &quot;redraw_mode&quot;: 2}</string>
+        </stringlist>
+       </property>
+       <property name="autoRangeX">
+        <bool>true</bool>
+       </property>
+       <property name="maxXRange">
+        <double>1.000000000000000</double>
+       </property>
+       <property name="autoRangeY">
+        <bool>true</bool>
+       </property>
+       <property name="minYRange">
+        <double>0.000000000000000</double>
+       </property>
+       <property name="maxYRange">
+        <double>1.000000000000000</double>
+       </property>
+      </widget>
+     </item>
      <item row="0" column="0">
       <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_1">
        <property name="toolTip">
@@ -139,7 +286,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -8.04646772407745, &quot;maxRange&quot;: 8.04646772407745, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -8.368326433040549, &quot;maxRange&quot;: 8.368326433040549, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -178,153 +325,6 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="0">
-      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_2">
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="showXGrid">
-        <bool>true</bool>
-       </property>
-       <property name="showYGrid">
-        <bool>true</bool>
-       </property>
-       <property name="yAxes">
-        <stringlist>
-         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -7.439411727142613, &quot;maxRange&quot;: 7.439411727142613, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
-        </stringlist>
-       </property>
-       <property name="title" stdset="0">
-        <string>Y Coordinates - Plane 2</string>
-       </property>
-       <property name="xLabels">
-        <stringlist>
-         <string>Channel Index</string>
-        </stringlist>
-       </property>
-       <property name="showLegend">
-        <bool>true</bool>
-       </property>
-       <property name="curves">
-        <stringlist>
-         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.ASIC1MaxCnt&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;ADC Counts&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Counts&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;yellow&quot;, &quot;redraw_mode&quot;: 2}</string>
-        </stringlist>
-       </property>
-       <property name="autoRangeX">
-        <bool>true</bool>
-       </property>
-       <property name="maxXRange">
-        <double>1.000000000000000</double>
-       </property>
-       <property name="autoRangeY">
-        <bool>true</bool>
-       </property>
-       <property name="minYRange">
-        <double>0.000000000000000</double>
-       </property>
-       <property name="maxYRange">
-        <double>1.000000000000000</double>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="2">
-      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_6">
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="showXGrid">
-        <bool>true</bool>
-       </property>
-       <property name="showYGrid">
-        <bool>true</bool>
-       </property>
-       <property name="yAxes">
-        <stringlist>
-         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -7.153280506867897, &quot;maxRange&quot;: 7.153280506867897, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
-        </stringlist>
-       </property>
-       <property name="title" stdset="0">
-        <string>Y Coordinates - Plane 6</string>
-       </property>
-       <property name="xLabels">
-        <stringlist>
-         <string>Channel Index</string>
-        </stringlist>
-       </property>
-       <property name="showLegend">
-        <bool>true</bool>
-       </property>
-       <property name="curves">
-        <stringlist>
-         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.ASIC5MaxCnt&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;ADC Counts&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Counts&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;yellow&quot;, &quot;redraw_mode&quot;: 2}</string>
-        </stringlist>
-       </property>
-       <property name="autoRangeX">
-        <bool>true</bool>
-       </property>
-       <property name="maxXRange">
-        <double>1.000000000000000</double>
-       </property>
-       <property name="autoRangeY">
-        <bool>true</bool>
-       </property>
-       <property name="minYRange">
-        <double>0.000000000000000</double>
-       </property>
-       <property name="maxYRange">
-        <double>1.000000000000000</double>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="3">
-      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_8">
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="showXGrid">
-        <bool>true</bool>
-       </property>
-       <property name="showYGrid">
-        <bool>true</bool>
-       </property>
-       <property name="yAxes">
-        <stringlist>
-         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -7.153280506867897, &quot;maxRange&quot;: 7.153280506867897, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
-        </stringlist>
-       </property>
-       <property name="title" stdset="0">
-        <string>Y Coordinates - Plane 8</string>
-       </property>
-       <property name="xLabels">
-        <stringlist>
-         <string>Channel Index</string>
-        </stringlist>
-       </property>
-       <property name="showLegend">
-        <bool>true</bool>
-       </property>
-       <property name="curves">
-        <stringlist>
-         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.ASIC7MaxCnt&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;ADC Counts&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Counts&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;yellow&quot;, &quot;redraw_mode&quot;: 2}</string>
-        </stringlist>
-       </property>
-       <property name="autoRangeX">
-        <bool>true</bool>
-       </property>
-       <property name="maxXRange">
-        <double>1.000000000000000</double>
-       </property>
-       <property name="autoRangeY">
-        <bool>true</bool>
-       </property>
-       <property name="minYRange">
-        <double>0.000000000000000</double>
-       </property>
-       <property name="maxYRange">
-        <double>1.000000000000000</double>
-       </property>
-      </widget>
-     </item>
      <item row="0" column="2">
       <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_5">
        <property name="toolTip">
@@ -338,7 +338,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -7.439411727142613, &quot;maxRange&quot;: 7.439411727142613, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -7.736988196228317, &quot;maxRange&quot;: 7.736988196228317, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -374,8 +374,84 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="1">
-      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_3">
+     <item row="1" column="4">
+      <widget class="PyDMTabWidget" name="PyDMTabWidget">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="alarmChannels">
+        <stringlist>
+         <string></string>
+        </stringlist>
+       </property>
+       <widget class="QWidget" name="tab">
+        <attribute name="title">
+         <string>Plot Configuration</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_6">
+         <item row="4" column="1">
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="1" column="0">
+            <widget class="PyDMCheckbox" name="PyDMCheckbox_noise">
+             <property name="toolTip">
+              <string/>
+             </property>
+             <property name="text">
+              <string>Noise</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="PyDMCheckbox" name="PyDMCheckbox_pedestals">
+             <property name="toolTip">
+              <string/>
+             </property>
+             <property name="text">
+              <string>Pedestals</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="PyDMCheckbox" name="PyDMCheckbox_cm">
+             <property name="toolTip">
+              <string/>
+             </property>
+             <property name="text">
+              <string>Common Mode</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>Plotted counts are by default RAW data. Check boxes below to REMOVE signal components.</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <spacer name="verticalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_8">
        <property name="toolTip">
         <string/>
        </property>
@@ -387,11 +463,11 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -7.153280506867897, &quot;maxRange&quot;: 7.153280506867897, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -7.439411727142613, &quot;maxRange&quot;: 7.439411727142613, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
-        <string>X Coordinates - Plane 3</string>
+        <string>Y Coordinates - Plane 8</string>
        </property>
        <property name="xLabels">
         <stringlist>
@@ -403,7 +479,7 @@
        </property>
        <property name="curves">
         <stringlist>
-         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.ASIC2MaxCnt&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;ADC Counts&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Counts&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;yellow&quot;, &quot;redraw_mode&quot;: 2}</string>
+         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.ASIC7MaxCnt&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;ADC Counts&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Counts&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;yellow&quot;, &quot;redraw_mode&quot;: 2}</string>
         </stringlist>
        </property>
        <property name="autoRangeX">
@@ -424,87 +500,6 @@
       </widget>
      </item>
      <item row="0" column="4">
-      <widget class="PyDMTabWidget" name="PyDMTabWidget">
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="whatsThis">
-        <string/>
-       </property>
-       <property name="alarmChannels">
-        <stringlist>
-         <string></string>
-        </stringlist>
-       </property>
-       <widget class="QWidget" name="tab">
-        <attribute name="title">
-         <string>ADC Count Configuration</string>
-        </attribute>
-        <widget class="PyDMCheckbox" name="PyDMCheckbox_noise">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>50</y>
-           <width>161</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="text">
-          <string>Noise</string>
-         </property>
-        </widget>
-        <widget class="PyDMCheckbox" name="PyDMCheckbox_pedestals">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>80</y>
-           <width>141</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="text">
-          <string>Pedestals</string>
-         </property>
-        </widget>
-        <widget class="PyDMCheckbox" name="PyDMCheckbox_cm">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>110</y>
-           <width>161</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="text">
-          <string>Common Mode</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>20</y>
-           <width>501</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Plotted counts are by default RAW data. Select below to REMOVE signal components.</string>
-         </property>
-        </widget>
-       </widget>
-      </widget>
-     </item>
-     <item row="1" column="4">
       <widget class="PyDMTabWidget" name="PyDMTabWidget_2">
        <property name="toolTip">
         <string/>
@@ -519,8 +514,47 @@
        </property>
        <widget class="QWidget" name="tab_2">
         <attribute name="title">
-         <string/>
+         <string>Main</string>
         </attribute>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="1" column="2">
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="1">
+            <widget class="PyDMLineEdit" name="PyDMLineEdit">
+             <property name="toolTip">
+              <string/>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+             <property name="channel">
+              <string>${dataReceiver}.FrameCnt</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>Frame Count</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
        </widget>
       </widget>
      </item>
@@ -543,6 +577,11 @@
    <class>PyDMCheckbox</class>
    <extends>QCheckBox</extends>
    <header>pydm.widgets.checkbox</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>pydm.widgets.line_edit</header>
   </customwidget>
  </customwidgets>
  <resources/>
