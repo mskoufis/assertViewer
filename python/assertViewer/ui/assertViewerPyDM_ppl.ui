@@ -528,7 +528,7 @@
               <bool>true</bool>
              </property>
              <property name="channel">
-              <string>${dataReceiver}.FrameCnt</string>
+              <string>${dataReceiver}.ASIC0FrameCnt</string>
              </property>
             </widget>
            </item>
