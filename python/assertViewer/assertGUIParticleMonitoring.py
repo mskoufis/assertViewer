@@ -140,14 +140,14 @@ class assertGUIParticleMonitoring(pydm.Display):
         self.ui.graphicsView_8.setLabel("bottom", "Channel Index")
 
         # Create plot items
-        self._plot_item_1 = self.ui.graphicsView_1.plot(x=[], y=[], symbol='+', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 1 particles", title="Particles per channel")
-        self._plot_item_2 = self.ui.graphicsView_2.plot(x=[], y=[], symbol='+', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 2 particles", title="Particles per channel")
-        self._plot_item_3 = self.ui.graphicsView_3.plot(x=[], y=[], symbol='+', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 3 particles", title="Particles per channel")
-        self._plot_item_4 = self.ui.graphicsView_4.plot(x=[], y=[], symbol='+', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 4 particles", title="Particles per channel")
-        self._plot_item_5 = self.ui.graphicsView_5.plot(x=[], y=[], symbol='+', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 5 particles", title="Particles per channel")
-        self._plot_item_6 = self.ui.graphicsView_6.plot(x=[], y=[], symbol='+', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 6 particles", title="Particles per channel")
-        self._plot_item_7 = self.ui.graphicsView_7.plot(x=[], y=[], symbol='+', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 7 particles", title="Particles per channel")
-        self._plot_item_8 = self.ui.graphicsView_8.plot(x=[], y=[], symbol='+', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 8 particles", title="Particles per channel")
+        self._plot_item_1 = self.ui.graphicsView_1.plot(x=[], y=[], symbol='o', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 1 particles", title="Particles per channel")
+        self._plot_item_2 = self.ui.graphicsView_2.plot(x=[], y=[], symbol='o', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 2 particles", title="Particles per channel")
+        self._plot_item_3 = self.ui.graphicsView_3.plot(x=[], y=[], symbol='o', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 3 particles", title="Particles per channel")
+        self._plot_item_4 = self.ui.graphicsView_4.plot(x=[], y=[], symbol='o', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 4 particles", title="Particles per channel")
+        self._plot_item_5 = self.ui.graphicsView_5.plot(x=[], y=[], symbol='o', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 5 particles", title="Particles per channel")
+        self._plot_item_6 = self.ui.graphicsView_6.plot(x=[], y=[], symbol='o', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 6 particles", title="Particles per channel")
+        self._plot_item_7 = self.ui.graphicsView_7.plot(x=[], y=[], symbol='o', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 7 particles", title="Particles per channel")
+        self._plot_item_8 = self.ui.graphicsView_8.plot(x=[], y=[], symbol='o', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 8 particles", title="Particles per channel")
 
         # Set titles
         self.ui.graphicsView_1.setTitle("Particles per channel")
