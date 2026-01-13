@@ -14,6 +14,11 @@ from assertViewer import *
 
 parser = argparse.ArgumentParser('Pyrogue Client')
 
+parser.add_argument('--port',
+                    type=str,
+                    help="Zmq port: 'port''",
+                    default='9099')
+
 parser.add_argument('--serverList',
                     type=str,
                     help="Server address: 'host:port' or list of addresses: 'host1:port1,host2:port2'",
@@ -31,7 +36,7 @@ parser.add_argument('--title',
 
 parser.add_argument('cmd',
                     type=str,
-                    choices=['event','trajectory'],
+                    choices=['event','particle','strip','trajectory'],
                     help='Client command to issue')
 
 parser.add_argument('--sizeY',
@@ -48,5 +53,7 @@ args = parser.parse_args()
 
 if args.cmd == 'event':
     runReceiverDisplay(dataReceiver=args.dataReceiver, serverList=args.serverList, title=args.title, sizeY=args.sizeY, sizeX=args.sizeX)
+if args.cmd == 'particle':
+    runParticleDisplay(dataReceiver=args.dataReceiver, serverList=args.serverList, title=args.title, sizeY=args.sizeY, sizeX=args.sizeX, port=args.port)
 elif args.cmd == 'trajectory':
     pass
