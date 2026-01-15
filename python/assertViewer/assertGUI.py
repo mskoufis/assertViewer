@@ -244,7 +244,7 @@ class assertGUI(pydm.Display):
 
     def ui_filename(self):
         # Point to the UI file
-        return 'ui/assertViewerPyDM_ppl.ui'
+        return 'ui/assertViewerPyDM_EventMonitoring.ui'
 
     def ui_filepath(self):
         # Return the full path to the UI file
