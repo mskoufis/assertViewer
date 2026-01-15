@@ -36,7 +36,7 @@ parser.add_argument('--title',
 
 parser.add_argument('cmd',
                     type=str,
-                    choices=['event','particle','strip','trajectory'],
+                    choices=['event','particle','beam','strip','trajectory'],
                     help='Client command to issue')
 
 parser.add_argument('--sizeY',
@@ -53,7 +53,9 @@ args = parser.parse_args()
 
 if args.cmd == 'event':
     runReceiverDisplay(dataReceiver=args.dataReceiver, serverList=args.serverList, title=args.title, sizeY=args.sizeY, sizeX=args.sizeX)
-if args.cmd == 'particle':
+elif args.cmd == 'particle':
     runParticleDisplay(dataReceiver=args.dataReceiver, serverList=args.serverList, title=args.title, sizeY=args.sizeY, sizeX=args.sizeX, port=args.port)
+elif args.cmd == 'beam':
+    runBeamDisplay(dataReceiver=args.dataReceiver, serverList=args.serverList, title=args.title, sizeY=args.sizeY, sizeX=args.sizeX, port=args.port)
 elif args.cmd == 'trajectory':
     pass

@@ -140,24 +140,24 @@ class assertGUIParticleMonitoring(pydm.Display):
         self.ui.graphicsView_8.setLabel("bottom", "Channel Index")
 
         # Create plot items
-        self._plot_item_1 = self.ui.graphicsView_1.plot(x=[], y=[], symbol='o', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 1 particles", title="Particles per channel")
-        self._plot_item_2 = self.ui.graphicsView_2.plot(x=[], y=[], symbol='o', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 2 particles", title="Particles per channel")
-        self._plot_item_3 = self.ui.graphicsView_3.plot(x=[], y=[], symbol='o', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 3 particles", title="Particles per channel")
-        self._plot_item_4 = self.ui.graphicsView_4.plot(x=[], y=[], symbol='o', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 4 particles", title="Particles per channel")
-        self._plot_item_5 = self.ui.graphicsView_5.plot(x=[], y=[], symbol='o', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 5 particles", title="Particles per channel")
-        self._plot_item_6 = self.ui.graphicsView_6.plot(x=[], y=[], symbol='o', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 6 particles", title="Particles per channel")
-        self._plot_item_7 = self.ui.graphicsView_7.plot(x=[], y=[], symbol='o', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 7 particles", title="Particles per channel")
-        self._plot_item_8 = self.ui.graphicsView_8.plot(x=[], y=[], symbol='o', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 8 particles", title="Particles per channel")
+        self._plot_item_1 = self.ui.graphicsView_1.plot(x=[], y=[], symbol='o', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 1 particles")
+        self._plot_item_2 = self.ui.graphicsView_2.plot(x=[], y=[], symbol='o', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 2 particles")
+        self._plot_item_3 = self.ui.graphicsView_3.plot(x=[], y=[], symbol='o', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 3 particles")
+        self._plot_item_4 = self.ui.graphicsView_4.plot(x=[], y=[], symbol='o', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 4 particles")
+        self._plot_item_5 = self.ui.graphicsView_5.plot(x=[], y=[], symbol='o', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 5 particles")
+        self._plot_item_6 = self.ui.graphicsView_6.plot(x=[], y=[], symbol='o', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 6 particles")
+        self._plot_item_7 = self.ui.graphicsView_7.plot(x=[], y=[], symbol='o', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 7 particles")
+        self._plot_item_8 = self.ui.graphicsView_8.plot(x=[], y=[], symbol='o', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Plane 8 particles")
 
         # Set titles
-        self.ui.graphicsView_1.setTitle("Particles per channel")
-        self.ui.graphicsView_2.setTitle("Particles per channel")
-        self.ui.graphicsView_3.setTitle("Particles per channel")
-        self.ui.graphicsView_4.setTitle("Particles per channel")
-        self.ui.graphicsView_5.setTitle("Particles per channel")
-        self.ui.graphicsView_6.setTitle("Particles per channel")
-        self.ui.graphicsView_7.setTitle("Particles per channel")
-        self.ui.graphicsView_8.setTitle("Particles per channel")
+        self.ui.graphicsView_1.setTitle("Plane 1 - Particles per channel")
+        self.ui.graphicsView_2.setTitle("Plane 2 - Particles per channel")
+        self.ui.graphicsView_3.setTitle("Plane 3 - Particles per channel")
+        self.ui.graphicsView_4.setTitle("Plane 4 - Particles per channel")
+        self.ui.graphicsView_5.setTitle("Plane 5 - Particles per channel")
+        self.ui.graphicsView_6.setTitle("Plane 6 - Particles per channel")
+        self.ui.graphicsView_7.setTitle("Plane 7 - Particles per channel")
+        self.ui.graphicsView_8.setTitle("Plane 8 - Particles per channel")
 
     def setup_main_tab(self):
         grid_layout=QGridLayout()
@@ -323,7 +323,7 @@ class assertGUIParticleMonitoring(pydm.Display):
         counts7 = self._root.AsicSampleProcessor.ASIC6Sig.get()
         counts8 = self._root.AsicSampleProcessor.ASIC7Sig.get()
 
-        # Compute electrons
+        # Compute LET
         rng = np.random.default_rng()
         LET1 = np.full(64, rng.integers(low=0.9e+06, high=1.1e+06))
         LET2 = np.full(64, rng.integers(low=0.9e+06, high=1.1e+06))
@@ -385,61 +385,9 @@ class assertGUIParticleMonitoring(pydm.Display):
             # Add labels, legend and update LET plots
             self.update_asic_LET()
 
-    def updateDisplay(self):
-        pass
-#        maxContrast = int(self.ui.PyDMLineEdit_5.displayText())
-#        minContrast = int(self.ui.PyDMLineEdit_4.displayText())
-#        self.ui.PyDMImageView.setColorMapLimits(minContrast, maxContrast)
-
-    # def setTimeSpan(self):
-    #     self.ui.PyDMTimePlot.setTimeSpan(int(self.ui.lineEdit.text()))
-
-    def clickProcess(self, event):
-        pass
-#        pos = self.ui.PyDMImageView.getView().getViewBox().mapSceneToView(event.scenePos())
-#        if self.sizeX != 0 and int(pos.x()) > self.sizeX :
-#            x = str(self.sizeX-1)
-#        elif int(pos.x()) < 0 :
-#            x = str(0)
-#        else :
-#            x = str(int(pos.x()))
-#
-#        if self.sizeY != 0 and  int(pos.y()) > self.sizeY :
-#            y = str(self.sizeY-1)
-#        elif int(pos.y()) < 0 :
-#            y = str(0)
-#        else :
-#            y = str(int(pos.y()))
-#
-#        self.ui.PyDMLineEdit_2.setText(x)
-#        self.ui.PyDMLineEdit_2.send_value()
-#        self.ui.PyDMLineEdit_6.setText(y)
-#        self.ui.PyDMLineEdit_6.send_value()
-
-    def resetPlots(self):
-    #     self.ui.PyDMTimePlot.removeYChannel(self.ui.PyDMTimePlot.findCurve(
-    #         f'{self._dataReceiver}.PixelData'))
-    #     self.ui.PyDMTimePlot.addYChannel(
-    #         y_channel = f'{self._dataReceiver}.PixelData',
-    #         name = "Pixel counts",
-    #         plot_style = "Line",
-    #         color = "white",
-    #         lineWidth = 1)
-         #print('Reset the plots...\n')
-         #for asic in np.linspace(1,self._asics,self._asics):
-         #   self.ui.get_attribute_dynamically(f'PyDMWaveformPlot_{asic}').clearCurves()
-         self.ui.graphicsView_1.clear()
-         self.ui.graphicsView_2.clear()
-         self.ui.graphicsView_3.clear()
-         self.ui.graphicsView_4.clear()
-         self.ui.graphicsView_5.clear()
-         self.ui.graphicsView_6.clear()
-         self.ui.graphicsView_7.clear()
-         self.ui.graphicsView_8.clear()
-
     def ui_filename(self):
         # Point to the UI file
-        return 'ui/assertViewerPyQtGraph_Particle.ui'
+        return 'ui/assertViewerPyQtGraph_ParticleMonitoring.ui'
 
     def ui_filepath(self):
         # Return the full path to the UI file
