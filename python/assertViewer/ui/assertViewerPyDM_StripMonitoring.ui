@@ -18,6 +18,9 @@
     <layout class="QGridLayout" name="gridLayout">
      <item row="0" column="4">
       <widget class="QTabWidget" name="tabWidget">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
          <horstretch>0</horstretch>
@@ -37,18 +40,68 @@
         </size>
        </property>
        <property name="currentIndex">
-        <number>1</number>
+        <number>0</number>
        </property>
-       <widget class="QWidget" name="tab">
+       <widget class="QWidget" name="main">
         <attribute name="title">
-         <string>Tab 1</string>
+         <string>Main</string>
         </attribute>
        </widget>
-       <widget class="QWidget" name="tab_2">
-        <attribute name="title">
-         <string>Tab 2</string>
-        </attribute>
-       </widget>
+      </widget>
+     </item>
+     <item row="3" column="4">
+      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_3">
+       <property name="maximumSize">
+        <size>
+         <width>750</width>
+         <height>500</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="showXGrid">
+        <bool>true</bool>
+       </property>
+       <property name="showYGrid">
+        <bool>true</bool>
+       </property>
+       <property name="title" stdset="0">
+        <string>TBD</string>
+       </property>
+       <property name="showLegend">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1" rowspan="2">
+      <widget class="PyDMImageView" name="PyDMImageView_3">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="imageChannel">
+        <string>{dataReceiver}.ASIC0Sig</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2" rowspan="2">
+      <widget class="PyDMImageView" name="PyDMImageView_4">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="imageChannel">
+        <string>{dataReceiver}.ASIC0Sig</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" rowspan="2">
+      <widget class="PyDMImageView" name="PyDMImageView">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="imageChannel">
+        <string>{dataReceiver}.ASIC0Sig</string>
+       </property>
       </widget>
      </item>
      <item row="2" column="4">
@@ -61,6 +114,63 @@
        </property>
        <property name="toolTip">
         <string/>
+       </property>
+       <property name="showXGrid">
+        <bool>true</bool>
+       </property>
+       <property name="showYGrid">
+        <bool>true</bool>
+       </property>
+       <property name="title" stdset="0">
+        <string>Sensor Channel Counts</string>
+       </property>
+       <property name="xLabels">
+        <stringlist>
+         <string>Channel Index</string>
+        </stringlist>
+       </property>
+       <property name="showLegend">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3" rowspan="2">
+      <widget class="PyDMImageView" name="PyDMImageView_5">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="imageChannel">
+        <string>{dataReceiver}.ASIC0Sig</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1" rowspan="2">
+      <widget class="PyDMImageView" name="PyDMImageView_6">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="imageChannel">
+        <string>{dataReceiver}.ASIC0Sig</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2" rowspan="2">
+      <widget class="PyDMImageView" name="PyDMImageView_7">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="imageChannel">
+        <string>{dataReceiver}.ASIC0Sig</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3" rowspan="2">
+      <widget class="PyDMImageView" name="PyDMImageView_8">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="imageChannel">
+        <string>{dataReceiver}.ASIC0Sig</string>
        </property>
       </widget>
      </item>
@@ -75,46 +185,22 @@
        <property name="toolTip">
         <string/>
        </property>
-      </widget>
-     </item>
-     <item row="3" column="4">
-      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_3">
-       <property name="maximumSize">
-        <size>
-         <width>750</width>
-         <height>500</height>
-        </size>
+       <property name="showXGrid">
+        <bool>true</bool>
        </property>
-       <property name="toolTip">
-        <string/>
+       <property name="showYGrid">
+        <bool>true</bool>
        </property>
-      </widget>
-     </item>
-     <item row="0" column="0" rowspan="2">
-      <widget class="PyDMImageView" name="PyDMImageView">
-       <property name="toolTip">
-        <string/>
+       <property name="title" stdset="0">
+        <string>Channel Counts vs Time</string>
        </property>
-      </widget>
-     </item>
-     <item row="0" column="1" rowspan="2">
-      <widget class="PyDMImageView" name="PyDMImageView_3">
-       <property name="toolTip">
-        <string/>
+       <property name="xLabels">
+        <stringlist>
+         <string>Time (Sample Index)</string>
+        </stringlist>
        </property>
-      </widget>
-     </item>
-     <item row="0" column="2" rowspan="2">
-      <widget class="PyDMImageView" name="PyDMImageView_4">
-       <property name="toolTip">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="3" rowspan="2">
-      <widget class="PyDMImageView" name="PyDMImageView_5">
-       <property name="toolTip">
-        <string/>
+       <property name="showLegend">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -123,26 +209,8 @@
        <property name="toolTip">
         <string/>
        </property>
-      </widget>
-     </item>
-     <item row="2" column="1" rowspan="2">
-      <widget class="PyDMImageView" name="PyDMImageView_6">
-       <property name="toolTip">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="2" rowspan="2">
-      <widget class="PyDMImageView" name="PyDMImageView_7">
-       <property name="toolTip">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="3" rowspan="2">
-      <widget class="PyDMImageView" name="PyDMImageView_8">
-       <property name="toolTip">
-        <string/>
+       <property name="imageChannel">
+        <string>{dataReceiver}.ASIC0Sig</string>
        </property>
       </widget>
      </item>
