@@ -168,8 +168,7 @@ class assertGUIChannelMonitoring(pydm.Display):
 
     def ui_filename(self):
         # Point to the UI file
-        #return 'ui/assertViewerPyDM_StripMonitoring.ui'
-        return 'ui/assertViewerPyDM_StripMonitoring_v2.ui'
+        return 'ui/assertViewerPyDM_StripMonitoring.ui'
         #return 'ui/ePixViewerPyDM.ui'
 
     def ui_filepath(self):
