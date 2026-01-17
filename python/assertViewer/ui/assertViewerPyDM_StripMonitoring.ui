@@ -42,7 +42,7 @@
        <property name="currentIndex">
         <number>0</number>
        </property>
-       <widget class="QWidget" name="main">
+       <widget class="QWidget" name="PyDMTabWidget_main">
         <attribute name="title">
          <string>Main</string>
         </attribute>
@@ -85,7 +85,7 @@
       </widget>
      </item>
      <item row="0" column="2" rowspan="2">
-      <widget class="PyDMImageView" name="PyDMImageView_4">
+      <widget class="PyDMImageView" name="PyDMImageView_5">
        <property name="toolTip">
         <string/>
        </property>
@@ -105,7 +105,7 @@
       </widget>
      </item>
      <item row="2" column="4">
-      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot">
+      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_2">
        <property name="maximumSize">
         <size>
          <width>750</width>
@@ -135,7 +135,7 @@
       </widget>
      </item>
      <item row="0" column="3" rowspan="2">
-      <widget class="PyDMImageView" name="PyDMImageView_5">
+      <widget class="PyDMImageView" name="PyDMImageView_7">
        <property name="toolTip">
         <string/>
        </property>
@@ -145,7 +145,7 @@
       </widget>
      </item>
      <item row="2" column="1" rowspan="2">
-      <widget class="PyDMImageView" name="PyDMImageView_6">
+      <widget class="PyDMImageView" name="PyDMImageView_4">
        <property name="toolTip">
         <string/>
        </property>
@@ -155,7 +155,7 @@
       </widget>
      </item>
      <item row="2" column="2" rowspan="2">
-      <widget class="PyDMImageView" name="PyDMImageView_7">
+      <widget class="PyDMImageView" name="PyDMImageView_6">
        <property name="toolTip">
         <string/>
        </property>
@@ -175,7 +175,7 @@
       </widget>
      </item>
      <item row="1" column="4">
-      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_2">
+      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_1">
        <property name="maximumSize">
         <size>
          <width>750</width>
