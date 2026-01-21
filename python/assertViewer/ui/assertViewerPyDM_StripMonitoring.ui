@@ -91,7 +91,7 @@
       </widget>
      </item>
      <item row="0" column="2" rowspan="2">
-      <widget class="PyDMImageView" name="PyDMImageView_4">
+      <widget class="PyDMImageView" name="PyDMImageView_5">
        <property name="toolTip">
         <string/>
        </property>
@@ -140,7 +140,7 @@
         <bool>true</bool>
        </property>
        <property name="title" stdset="0">
-        <string>Sensor Channel Counts</string>
+        <string>Sensor - All Channel Counts</string>
        </property>
        <property name="xLabels">
         <stringlist>
@@ -153,7 +153,7 @@
       </widget>
      </item>
      <item row="0" column="3" rowspan="2">
-      <widget class="PyDMImageView" name="PyDMImageView_5">
+      <widget class="PyDMImageView" name="PyDMImageView_7">
        <property name="toolTip">
         <string/>
        </property>
@@ -169,7 +169,7 @@
       </widget>
      </item>
      <item row="2" column="1" rowspan="2">
-      <widget class="PyDMImageView" name="PyDMImageView_6">
+      <widget class="PyDMImageView" name="PyDMImageView_4">
        <property name="toolTip">
         <string/>
        </property>
@@ -185,7 +185,7 @@
       </widget>
      </item>
      <item row="2" column="2" rowspan="2">
-      <widget class="PyDMImageView" name="PyDMImageView_7">
+      <widget class="PyDMImageView" name="PyDMImageView_6">
        <property name="toolTip">
         <string/>
        </property>
@@ -234,7 +234,7 @@
         <bool>true</bool>
        </property>
        <property name="title" stdset="0">
-        <string>Channel Counts vs Time</string>
+        <string>Channel - Counts vs Time</string>
        </property>
        <property name="xLabels">
         <stringlist>
