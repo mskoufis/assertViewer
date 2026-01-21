@@ -52,10 +52,8 @@ def runChannelDisplay(dataReceiver, serverList='localhost:9090', root=None,
 class assertGUIChannelMonitoring(pydm.Display):
     def __init__(self, parent=None, args=None, macros=None):
         super().__init__(parent=parent, args=args, macros=macros)
-        # print(f'{macros=}')
-        self._asics = 8
         self._dataReceiver = macros['dataReceiver']
-#        self.ui.PyDMImageView.newImageSignal.connect(self.updateDisplay)
+        #print(f'{macros=}')
 #        self.ui.PyDMImageView.scene.sigMouseClicked.connect(self.clickProcess)
         # self.ui.PyDMLineEdit_3.textChanged.connect(self.resetPlots)
         # self.ui.PyDMLineEdit_6.textChanged.connect(self.resetPlots)
@@ -64,21 +62,36 @@ class assertGUIChannelMonitoring(pydm.Display):
         # self.ui.pushButton.clicked.connect(self.resetPlots)
         self.sizeX = macros['sizeX']
         self.sizeY = macros['sizeY']
-        #self.setup_main_tab()
+        self._asics = 8
+        self.set_image_channels()
+        self.setup_main_tab()
         #self.setup_config_tab()
 
+    def set_image_channels(self):
+        print("Setting channel to: " + f"{self._dataReceiver}.ASIC0Sig")
+        self.ui.PyDMImageView_1.setImageChannel(f"{self._dataReceiver}.ASIC0Image")
+        self.ui.PyDMImageView_2.setImageChannel(f"{self._dataReceiver}.ASIC1Image")
+        self.ui.PyDMImageView_3.setImageChannel(f"{self._dataReceiver}.ASIC2Image")
+        self.ui.PyDMImageView_4.setImageChannel(f"{self._dataReceiver}.ASIC3Image")
+        self.ui.PyDMImageView_5.setImageChannel(f"{self._dataReceiver}.ASIC4Image")
+        self.ui.PyDMImageView_6.setImageChannel(f"{self._dataReceiver}.ASIC5Image")
+        self.ui.PyDMImageView_7.setImageChannel(f"{self._dataReceiver}.ASIC6Image")
+        self.ui.PyDMImageView_8.setImageChannel(f"{self._dataReceiver}.ASIC7Image")
+
+        self.ui.PyDMImageView_1.newImageSignal.connect(self.updateDisplay)
+
     def setup_main_tab(self):
-        #grid_layout=QGridLayout()
-        #spacer_label=QLabel('')
-        #frame_cnt_label=QLabel(f'Frame Count')
-        #frame_cnt_line=PyDMLineEdit(init_channel=f'{self._dataReceiver}.ASIC0FrameCnt')
-        #frame_cnt_line.textChanged.connect(self.onClick_updatePlots)
-        #vertical_spacer=QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-        #grid_layout.addWidget(spacer_label,0,0)
-        #grid_layout.addWidget(frame_cnt_label,1,0)
-        #grid_layout.addWidget(frame_cnt_line,1,1)
-        #grid_layout.addItem(vertical_spacer,2,0)
-        #self.ui.PyDMTabWidget_main.setLayout(grid_layout)
+        grid_layout=QGridLayout()
+        spacer_label=QLabel('')
+        frame_cnt_label=QLabel(f'Frame Count')
+        frame_cnt_line=PyDMLineEdit(init_channel=f'{self._dataReceiver}.ASIC0FrameCnt')
+        frame_cnt_line.textChanged.connect(self.onClick_updatePlots)
+        vertical_spacer=QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        grid_layout.addWidget(spacer_label,0,0)
+        grid_layout.addWidget(frame_cnt_label,1,0)
+        grid_layout.addWidget(frame_cnt_line,1,1)
+        grid_layout.addItem(vertical_spacer,2,0)
+        self.ui.PyDMTabWidget_main.setLayout(grid_layout)
         pass
 
     def setup_config_tab(self):
@@ -100,6 +113,7 @@ class assertGUIChannelMonitoring(pydm.Display):
         #print('Update the plots ...\n')
 
         self.resetPlots()
+        self.updateDisplay()
 
         # Read current plot settings and update plots
         #noise_checkbox     = self.ui.PyDMCheckbox_noise 
@@ -114,6 +128,7 @@ class assertGUIChannelMonitoring(pydm.Display):
         # The checkboxes determine which channel we add to the plot each time
 
     def updateDisplay(self):
+        print("Update display... Channel: "+str(self.ui.PyDMImageView_1.readChannel())+str("\n"))
         pass
 #        maxContrast = int(self.ui.PyDMLineEdit_5.displayText())
 #        minContrast = int(self.ui.PyDMLineEdit_4.displayText())
