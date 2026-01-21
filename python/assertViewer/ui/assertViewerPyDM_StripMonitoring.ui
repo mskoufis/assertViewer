@@ -80,10 +80,10 @@
         <string/>
        </property>
        <property name="colorMapMin">
-        <double>10000.000000000000000</double>
+        <double>0.000000000000000</double>
        </property>
        <property name="colorMapMax">
-        <double>12000.000000000000000</double>
+        <double>250.000000000000000</double>
        </property>
        <property name="colorMap">
         <enum>PyDMImageView::Monochrome</enum>
@@ -102,10 +102,10 @@
         <string/>
        </property>
        <property name="colorMapMin">
-        <double>10000.000000000000000</double>
+        <double>0.000000000000000</double>
        </property>
        <property name="colorMapMax">
-        <double>12000.000000000000000</double>
+        <double>250.000000000000000</double>
        </property>
        <property name="colorMap">
         <enum>PyDMImageView::Monochrome</enum>
@@ -124,10 +124,10 @@
         <string/>
        </property>
        <property name="colorMapMin">
-        <double>10000.000000000000000</double>
+        <double>0.000000000000000</double>
        </property>
        <property name="colorMapMax">
-        <double>12000.000000000000000</double>
+        <double>250.000000000000000</double>
        </property>
        <property name="colorMap">
         <enum>PyDMImageView::Monochrome</enum>
@@ -176,10 +176,10 @@
         <string/>
        </property>
        <property name="colorMapMin">
-        <double>10000.000000000000000</double>
+        <double>0.000000000000000</double>
        </property>
        <property name="colorMapMax">
-        <double>12000.000000000000000</double>
+        <double>250.000000000000000</double>
        </property>
        <property name="colorMap">
         <enum>PyDMImageView::Monochrome</enum>
@@ -198,10 +198,10 @@
         <string/>
        </property>
        <property name="colorMapMin">
-        <double>10000.000000000000000</double>
+        <double>0.000000000000000</double>
        </property>
        <property name="colorMapMax">
-        <double>12000.000000000000000</double>
+        <double>250.000000000000000</double>
        </property>
        <property name="colorMap">
         <enum>PyDMImageView::Monochrome</enum>
@@ -220,10 +220,10 @@
         <string/>
        </property>
        <property name="colorMapMin">
-        <double>10000.000000000000000</double>
+        <double>0.000000000000000</double>
        </property>
        <property name="colorMapMax">
-        <double>12000.000000000000000</double>
+        <double>250.000000000000000</double>
        </property>
        <property name="colorMap">
         <enum>PyDMImageView::Monochrome</enum>
@@ -242,10 +242,10 @@
         <string/>
        </property>
        <property name="colorMapMin">
-        <double>10000.000000000000000</double>
+        <double>0.000000000000000</double>
        </property>
        <property name="colorMapMax">
-        <double>12000.000000000000000</double>
+        <double>250.000000000000000</double>
        </property>
        <property name="colorMap">
         <enum>PyDMImageView::Monochrome</enum>
@@ -294,10 +294,10 @@
         <string/>
        </property>
        <property name="colorMapMin">
-        <double>10000.000000000000000</double>
+        <double>0.000000000000000</double>
        </property>
        <property name="colorMapMax">
-        <double>12000.000000000000000</double>
+        <double>250.000000000000000</double>
        </property>
        <property name="colorMap">
         <enum>PyDMImageView::Monochrome</enum>
