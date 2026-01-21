@@ -42,7 +42,7 @@
        <property name="currentIndex">
         <number>0</number>
        </property>
-       <widget class="QWidget" name="PyDMTabWidget_main">
+       <widget class="QWidget" name="main">
         <attribute name="title">
          <string>Main</string>
         </attribute>
@@ -79,42 +79,30 @@
        <property name="toolTip">
         <string/>
        </property>
-       <property name="colorMapMin">
-        <double>0.000000000000000</double>
-       </property>
-       <property name="colorMapMax">
-        <double>250.000000000000000</double>
-       </property>
-       <property name="colorMap">
-        <enum>PyDMImageView::Monochrome</enum>
-       </property>
        <property name="readingOrder">
         <enum>PyDMImageView::Clike</enum>
        </property>
        <property name="imageChannel">
-        <string>${dataReceiver}.ASIC0Sig</string>
+        <string/>
+       </property>
+       <property name="showAxes">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
      <item row="0" column="2" rowspan="2">
-      <widget class="PyDMImageView" name="PyDMImageView_5">
+      <widget class="PyDMImageView" name="PyDMImageView_4">
        <property name="toolTip">
         <string/>
-       </property>
-       <property name="colorMapMin">
-        <double>0.000000000000000</double>
-       </property>
-       <property name="colorMapMax">
-        <double>250.000000000000000</double>
-       </property>
-       <property name="colorMap">
-        <enum>PyDMImageView::Monochrome</enum>
        </property>
        <property name="readingOrder">
         <enum>PyDMImageView::Clike</enum>
        </property>
        <property name="imageChannel">
-        <string>${dataReceiver}.ASIC0Sig</string>
+        <string/>
+       </property>
+       <property name="showAxes">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -123,24 +111,112 @@
        <property name="toolTip">
         <string/>
        </property>
-       <property name="colorMapMin">
-        <double>0.000000000000000</double>
+       <property name="readingOrder">
+        <enum>PyDMImageView::Clike</enum>
        </property>
-       <property name="colorMapMax">
-        <double>250.000000000000000</double>
+       <property name="imageChannel">
+        <string/>
        </property>
-       <property name="colorMap">
-        <enum>PyDMImageView::Monochrome</enum>
+       <property name="showAxes">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="4">
+      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot">
+       <property name="maximumSize">
+        <size>
+         <width>750</width>
+         <height>500</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="showXGrid">
+        <bool>true</bool>
+       </property>
+       <property name="showYGrid">
+        <bool>true</bool>
+       </property>
+       <property name="title" stdset="0">
+        <string>Sensor Channel Counts</string>
+       </property>
+       <property name="xLabels">
+        <stringlist>
+         <string>Channel Index</string>
+        </stringlist>
+       </property>
+       <property name="showLegend">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3" rowspan="2">
+      <widget class="PyDMImageView" name="PyDMImageView_5">
+       <property name="toolTip">
+        <string/>
        </property>
        <property name="readingOrder">
         <enum>PyDMImageView::Clike</enum>
        </property>
        <property name="imageChannel">
-        <string>${dataReceiver}.ASIC0Sig</string>
+        <string/>
+       </property>
+       <property name="showAxes">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
-     <item row="2" column="4">
+     <item row="2" column="1" rowspan="2">
+      <widget class="PyDMImageView" name="PyDMImageView_6">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="readingOrder">
+        <enum>PyDMImageView::Clike</enum>
+       </property>
+       <property name="imageChannel">
+        <string/>
+       </property>
+       <property name="showAxes">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2" rowspan="2">
+      <widget class="PyDMImageView" name="PyDMImageView_7">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="readingOrder">
+        <enum>PyDMImageView::Clike</enum>
+       </property>
+       <property name="imageChannel">
+        <string/>
+       </property>
+       <property name="showAxes">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3" rowspan="2">
+      <widget class="PyDMImageView" name="PyDMImageView_8">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="readingOrder">
+        <enum>PyDMImageView::Clike</enum>
+       </property>
+       <property name="imageChannel">
+        <string/>
+       </property>
+       <property name="showAxes">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="4">
       <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_2">
        <property name="maximumSize">
         <size>
@@ -158,125 +234,7 @@
         <bool>true</bool>
        </property>
        <property name="title" stdset="0">
-        <string>Sensor - All Channel Counts</string>
-       </property>
-       <property name="xLabels">
-        <stringlist>
-         <string>Channel Index</string>
-        </stringlist>
-       </property>
-       <property name="showLegend">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="3" rowspan="2">
-      <widget class="PyDMImageView" name="PyDMImageView_7">
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="colorMapMin">
-        <double>0.000000000000000</double>
-       </property>
-       <property name="colorMapMax">
-        <double>250.000000000000000</double>
-       </property>
-       <property name="colorMap">
-        <enum>PyDMImageView::Monochrome</enum>
-       </property>
-       <property name="readingOrder">
-        <enum>PyDMImageView::Clike</enum>
-       </property>
-       <property name="imageChannel">
-        <string>${dataReceiver}.ASIC0Sig</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1" rowspan="2">
-      <widget class="PyDMImageView" name="PyDMImageView_4">
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="colorMapMin">
-        <double>0.000000000000000</double>
-       </property>
-       <property name="colorMapMax">
-        <double>250.000000000000000</double>
-       </property>
-       <property name="colorMap">
-        <enum>PyDMImageView::Monochrome</enum>
-       </property>
-       <property name="readingOrder">
-        <enum>PyDMImageView::Clike</enum>
-       </property>
-       <property name="imageChannel">
-        <string>${dataReceiver}.ASIC0Sig</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="2" rowspan="2">
-      <widget class="PyDMImageView" name="PyDMImageView_6">
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="colorMapMin">
-        <double>0.000000000000000</double>
-       </property>
-       <property name="colorMapMax">
-        <double>250.000000000000000</double>
-       </property>
-       <property name="colorMap">
-        <enum>PyDMImageView::Monochrome</enum>
-       </property>
-       <property name="readingOrder">
-        <enum>PyDMImageView::Clike</enum>
-       </property>
-       <property name="imageChannel">
-        <string>${dataReceiver}.ASIC0Sig</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="3" rowspan="2">
-      <widget class="PyDMImageView" name="PyDMImageView_8">
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="colorMapMin">
-        <double>0.000000000000000</double>
-       </property>
-       <property name="colorMapMax">
-        <double>250.000000000000000</double>
-       </property>
-       <property name="colorMap">
-        <enum>PyDMImageView::Monochrome</enum>
-       </property>
-       <property name="readingOrder">
-        <enum>PyDMImageView::Clike</enum>
-       </property>
-       <property name="imageChannel">
-        <string>${dataReceiver}.ASIC0Sig</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="4">
-      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_1">
-       <property name="maximumSize">
-        <size>
-         <width>750</width>
-         <height>500</height>
-        </size>
-       </property>
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="showXGrid">
-        <bool>true</bool>
-       </property>
-       <property name="showYGrid">
-        <bool>true</bool>
-       </property>
-       <property name="title" stdset="0">
-        <string>Channel - Counts vs Time</string>
+        <string>Channel Counts vs Time</string>
        </property>
        <property name="xLabels">
         <stringlist>
@@ -293,20 +251,14 @@
        <property name="toolTip">
         <string/>
        </property>
-       <property name="colorMapMin">
-        <double>0.000000000000000</double>
-       </property>
-       <property name="colorMapMax">
-        <double>250.000000000000000</double>
-       </property>
-       <property name="colorMap">
-        <enum>PyDMImageView::Monochrome</enum>
-       </property>
        <property name="readingOrder">
         <enum>PyDMImageView::Clike</enum>
        </property>
        <property name="imageChannel">
-        <string>${dataReceiver}.ASIC0Sig</string>
+        <string/>
+       </property>
+       <property name="showAxes">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
