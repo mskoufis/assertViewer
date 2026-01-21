@@ -42,7 +42,7 @@
        <property name="currentIndex">
         <number>0</number>
        </property>
-       <widget class="QWidget" name="main">
+       <widget class="QWidget" name="PyDMTabWidget_main">
         <attribute name="title">
          <string>Main</string>
         </attribute>
