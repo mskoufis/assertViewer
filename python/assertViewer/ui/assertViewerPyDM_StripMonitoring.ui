@@ -73,6 +73,23 @@
              </property>
             </widget>
            </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>Frame Count</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="PyDMLineEdit" name="PyDMLineEdit_1">
+             <property name="toolTip">
+              <string/>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
            <item row="1" column="1">
             <widget class="PyDMLineEdit" name="PyDMLineEdit_2">
              <property name="toolTip">
@@ -83,15 +100,18 @@
              </property>
             </widget>
            </item>
-           <item row="0" column="0">
-            <widget class="QLabel" name="label">
-             <property name="text">
-              <string>Frame Count</string>
+           <item row="1" column="2">
+            <widget class="PyDMLineEdit" name="PyDMLineEdit_4">
+             <property name="toolTip">
+              <string/>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
-           <item row="0" column="1">
-            <widget class="PyDMLineEdit" name="PyDMLineEdit_1">
+           <item row="2" column="2">
+            <widget class="PyDMLineEdit" name="PyDMLineEdit_5">
              <property name="toolTip">
               <string/>
              </property>
