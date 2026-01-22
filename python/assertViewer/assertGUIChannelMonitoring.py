@@ -65,10 +65,8 @@ class assertGUIChannelMonitoring(pydm.Display):
         self._asics = 8
         self.set_image_channels()
         self.setup_main_tab()
-        #self.setup_config_tab()
 
     def set_image_channels(self):
-        print("Setting channel to: " + f"{self._dataReceiver}.ASIC0Sig")
         self.ui.PyDMImageView_1.setImageChannel(f"{self._dataReceiver}.ASIC0Image")
         self.ui.PyDMImageView_2.setImageChannel(f"{self._dataReceiver}.ASIC1Image")
         self.ui.PyDMImageView_3.setImageChannel(f"{self._dataReceiver}.ASIC2Image")
@@ -78,61 +76,37 @@ class assertGUIChannelMonitoring(pydm.Display):
         self.ui.PyDMImageView_7.setImageChannel(f"{self._dataReceiver}.ASIC6Image")
         self.ui.PyDMImageView_8.setImageChannel(f"{self._dataReceiver}.ASIC7Image")
 
-        self.ui.PyDMImageView_1.newImageSignal.connect(self.updateDisplay)
+        #self.ui.PyDMImageView_1.newImageSignal.connect(self.updateDisplay)
 
     def setup_main_tab(self):
-        grid_layout=QGridLayout()
-        spacer_label=QLabel('')
-        frame_cnt_label=QLabel(f'Frame Count')
-        frame_cnt_line=PyDMLineEdit(init_channel=f'{self._dataReceiver}.ASIC0FrameCnt')
-        frame_cnt_line.textChanged.connect(self.onClick_updatePlots)
-        vertical_spacer=QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-        grid_layout.addWidget(spacer_label,0,0)
-        grid_layout.addWidget(frame_cnt_label,1,0)
-        grid_layout.addWidget(frame_cnt_line,1,1)
-        grid_layout.addItem(vertical_spacer,2,0)
-        self.ui.PyDMTabWidget_main.setLayout(grid_layout)
-        pass
+        self.ui.PyDMLineEdit_1.setChannel(f'{self._dataReceiver}.ASIC0FrameCnt')
+        self.ui.PyDMLineEdit_1.textChanged.connect(self.updateDisplay)
 
-    def setup_config_tab(self):
-        #self.ui.PyDMCheckbox_noise.setChecked(True)
-        #self.ui.PyDMCheckbox_pedestals.setChecked(True)
-        #self.ui.PyDMCheckbox_cm.setChecked(True)
+        self.ui.PyDMLineEdit_2.setChannel(f'{self._dataReceiver}.MinContrast')
+        self.ui.PyDMLineEdit_3.setChannel(f'{self._dataReceiver}.MaxContrast')
 
-        #self.ui.PyDMCheckbox_noise.clicked.connect(self.onClick_updatePlots)
-        #self.ui.PyDMCheckbox_pedestals.clicked.connect(self.onClick_updatePlots)
-        #self.ui.PyDMCheckbox_cm.clicked.connect(self.onClick_updatePlots)
-        pass
+        self.ui.PyDMLineEdit_4.setChannel(f'{self._dataReceiver}.MinContrast')
+        self.ui.PyDMLineEdit_4.textChanged.connect(self.updateDisplay)
+
+        self.ui.PyDMLineEdit_5.setChannel(f'{self._dataReceiver}.MaxContrast')
+        self.ui.PyDMLineEdit_5.textChanged.connect(self.updateDisplay)
 
     def get_attribute_dynamically(self, attribute_name):
         # Accessing an instance variable dynamically
         instance_attr = getattr(self, attribute_name, "Attribute not found")
         return instance_attr
 
-    def onClick_updatePlots(self):
-        #print('Update the plots ...\n')
-
-        self.resetPlots()
-        self.updateDisplay()
-
-        # Read current plot settings and update plots
-        #noise_checkbox     = self.ui.PyDMCheckbox_noise 
-        #pedestals_checkbox = self.ui.PyDMCheckbox_pedestals
-        #cm_checkbox        = self.ui.PyDMCheckbox_cm
-
-        # Redraw the ADC counts on all sensor planes
-        # Check to see if the frame count has incremented
-        # If it has, then reset all plots and redraw the counts
-        # Assuming all count combinations exist as rogue variables already
-        # And also that the framecount is parsed out and stored in a rogue variable
-        # The checkboxes determine which channel we add to the plot each time
-
     def updateDisplay(self):
-        print("Update display... Channel: "+str(self.ui.PyDMImageView_1.readChannel())+str("\n"))
-        pass
-#        maxContrast = int(self.ui.PyDMLineEdit_5.displayText())
-#        minContrast = int(self.ui.PyDMLineEdit_4.displayText())
-#        self.ui.PyDMImageView.setColorMapLimits(minContrast, maxContrast)
+        minContrast = int(self.ui.PyDMLineEdit_2.displayText())
+        maxContrast = int(self.ui.PyDMLineEdit_3.displayText())
+        self.ui.PyDMImageView_1.setColorMapLimits(minContrast, maxContrast)
+        self.ui.PyDMImageView_2.setColorMapLimits(minContrast, maxContrast)
+        self.ui.PyDMImageView_3.setColorMapLimits(minContrast, maxContrast)
+        self.ui.PyDMImageView_4.setColorMapLimits(minContrast, maxContrast)
+        self.ui.PyDMImageView_5.setColorMapLimits(minContrast, maxContrast)
+        self.ui.PyDMImageView_6.setColorMapLimits(minContrast, maxContrast)
+        self.ui.PyDMImageView_7.setColorMapLimits(minContrast, maxContrast)
+        self.ui.PyDMImageView_8.setColorMapLimits(minContrast, maxContrast)
 
     # def setTimeSpan(self):
     #     self.ui.PyDMTimePlot.setTimeSpan(int(self.ui.lineEdit.text()))
@@ -159,32 +133,9 @@ class assertGUIChannelMonitoring(pydm.Display):
 #        self.ui.PyDMLineEdit_6.setText(y)
 #        self.ui.PyDMLineEdit_6.send_value()
 
-    def resetPlots(self):
-    #     self.ui.PyDMTimePlot.removeYChannel(self.ui.PyDMTimePlot.findCurve(
-    #         f'{self._dataReceiver}.PixelData'))
-    #     self.ui.PyDMTimePlot.addYChannel(
-    #         y_channel = f'{self._dataReceiver}.PixelData',
-    #         name = "Pixel counts",
-    #         plot_style = "Line",
-    #         color = "white",
-    #         lineWidth = 1)
-         #print('Reset the plots...\n')
-         #for asic in np.linspace(1,self._asics,self._asics):
-         #   self.ui.get_attribute_dynamically(f'PyDMWaveformPlot_{asic}').clearCurves()
-         #self.ui.PyDMWaveformPlot_1.clearCurves()
-         #self.ui.PyDMWaveformPlot_2.clearCurves()
-         #self.ui.PyDMWaveformPlot_3.clearCurves()
-         #self.ui.PyDMWaveformPlot_4.clearCurves()
-         #self.ui.PyDMWaveformPlot_5.clearCurves()
-         #self.ui.PyDMWaveformPlot_6.clearCurves()
-         #self.ui.PyDMWaveformPlot_7.clearCurves()
-         #self.ui.PyDMWaveformPlot_8.clearCurves()
-         pass
-
     def ui_filename(self):
         # Point to the UI file
         return 'ui/assertViewerPyDM_StripMonitoring.ui'
-        #return 'ui/ePixViewerPyDM.ui'
 
     def ui_filepath(self):
         # Return the full path to the UI file
