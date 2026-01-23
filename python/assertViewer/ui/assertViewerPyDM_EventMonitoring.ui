@@ -41,7 +41,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -9.789758310566752, &quot;maxRange&quot;: 9.789758310566752, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -10.181348642989422, &quot;maxRange&quot;: 10.181348642989422, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -56,9 +56,7 @@
         <bool>true</bool>
        </property>
        <property name="curves">
-        <stringlist>
-         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.ASIC1MaxCnt&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;ADC Counts&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Counts&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;yellow&quot;, &quot;redraw_mode&quot;: 2}</string>
-        </stringlist>
+        <stringlist/>
        </property>
        <property name="autoRangeX">
         <bool>true</bool>
@@ -90,7 +88,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -9.789758310566752, &quot;maxRange&quot;: 9.789758310566752, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -10.181348642989422, &quot;maxRange&quot;: 10.181348642989422, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -105,9 +103,7 @@
         <bool>true</bool>
        </property>
        <property name="curves">
-        <stringlist>
-         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.ASIC6MaxCnt&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;ADC Counts&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Counts&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;yellow&quot;, &quot;redraw_mode&quot;: 2}</string>
-        </stringlist>
+        <stringlist/>
        </property>
        <property name="autoRangeX">
         <bool>true</bool>
@@ -139,7 +135,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -9.413229144775723, &quot;maxRange&quot;: 9.413229144775723, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -10.181348642989422, &quot;maxRange&quot;: 10.181348642989422, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -154,9 +150,7 @@
         <bool>true</bool>
        </property>
        <property name="curves">
-        <stringlist>
-         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.ASIC2MaxCnt&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;ADC Counts&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Counts&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;yellow&quot;, &quot;redraw_mode&quot;: 2}</string>
-        </stringlist>
+        <stringlist/>
        </property>
        <property name="autoRangeX">
         <bool>true</bool>
@@ -203,9 +197,7 @@
         <bool>true</bool>
        </property>
        <property name="curves">
-        <stringlist>
-         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.ASIC3MaxCnt&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;ADC Counts&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Counts&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;yellow&quot;, &quot;redraw_mode&quot;: 2}</string>
-        </stringlist>
+        <stringlist/>
        </property>
        <property name="autoRangeX">
         <bool>true</bool>
@@ -237,7 +229,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -9.413229144775723, &quot;maxRange&quot;: 9.413229144775723, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -10.181348642989422, &quot;maxRange&quot;: 10.181348642989422, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -252,9 +244,7 @@
         <bool>true</bool>
        </property>
        <property name="curves">
-        <stringlist>
-         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.ASIC5MaxCnt&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;ADC Counts&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Counts&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;yellow&quot;, &quot;redraw_mode&quot;: 2}</string>
-        </stringlist>
+        <stringlist/>
        </property>
        <property name="autoRangeX">
         <bool>true</bool>
@@ -286,7 +276,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -10.588602588708998, &quot;maxRange&quot;: 10.588602588708998, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -11.452632559947652, &quot;maxRange&quot;: 11.452632559947652, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -301,9 +291,7 @@
         <bool>true</bool>
        </property>
        <property name="curves">
-        <stringlist>
-         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.ASIC0MaxCnt&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;ADC Counts&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Counts&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;yellow&quot;, &quot;redraw_mode&quot;: 2}</string>
-        </stringlist>
+        <stringlist/>
        </property>
        <property name="autoRangeX">
         <bool>true</bool>
@@ -338,7 +326,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -9.789758310566752, &quot;maxRange&quot;: 9.789758310566752, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -10.181348642989422, &quot;maxRange&quot;: 10.181348642989422, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -353,9 +341,7 @@
         <bool>true</bool>
        </property>
        <property name="curves">
-        <stringlist>
-         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.ASIC4MaxCnt&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;ADC Counts&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Counts&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;yellow&quot;, &quot;redraw_mode&quot;: 2}</string>
-        </stringlist>
+        <stringlist/>
        </property>
        <property name="autoRangeX">
         <bool>true</bool>
@@ -477,7 +463,7 @@
        </property>
        <property name="yAxes">
         <stringlist>
-         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -9.413229144775723, &quot;maxRange&quot;: 9.413229144775723, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+         <string>{&quot;name&quot;: &quot;Counts&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;ADC Counts&quot;, &quot;minRange&quot;: -10.181348642989422, &quot;maxRange&quot;: 10.181348642989422, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
         </stringlist>
        </property>
        <property name="title" stdset="0">
@@ -492,9 +478,7 @@
         <bool>true</bool>
        </property>
        <property name="curves">
-        <stringlist>
-         <string>{&quot;y_channel&quot;: &quot;${dataReceiver}.ASIC7MaxCnt&quot;, &quot;x_channel&quot;: &quot;${dataReceiver}.IndexChannels&quot;, &quot;plot_style&quot;: &quot;Bar&quot;, &quot;name&quot;: &quot;ADC Counts&quot;, &quot;color&quot;: &quot;#00aaff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Counts&quot;, &quot;barWidth&quot;: 5.0, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;yellow&quot;, &quot;redraw_mode&quot;: 2}</string>
-        </stringlist>
+        <stringlist/>
        </property>
        <property name="autoRangeX">
         <bool>true</bool>
