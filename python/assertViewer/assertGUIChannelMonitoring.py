@@ -59,10 +59,16 @@ class assertGUIChannelMonitoring(pydm.Display):
         self.sizeY = macros['sizeY']
         self._asics = 8
         self._channels = 64
+        self.init_colorbar()
         self.init_crosshair()
         self.setup_main_tab()
         self.set_image_channels()
         self.enable_mouse_cursor()
+
+    def init_colorbar(self):
+        for i in np.arange(1,self._asics+1):
+            setattr(self, f'self.img_item_{i}', getattr(self.ui, f'PyDMImageView_{i}').getImageItem())
+            setattr(self, f'self.colorbar_{i}', getattr(self.ui, f'PyDMImageView_{i}').getView().addColorBar(getattr(self,f'self.img_item_{i}'),colorMap='inferno',values=(int(self.ui.PyDMLineEdit_2.text()), int(self.ui.PyDMLineEdit_3.text())),label='ADC Counts'))
 
     def init_crosshair(self):
         for i in np.arange(1,self._asics+1):
@@ -103,27 +109,33 @@ class assertGUIChannelMonitoring(pydm.Display):
         self.ui.PyDMLineEdit_5.textChanged.connect(self.updateColorMapLimits)
 
     def set_image_channels(self):
-        self.ui.PyDMImageView_1.setImageChannel(f"{self._dataReceiver}.ASIC0Image")
-        self.ui.PyDMImageView_2.setImageChannel(f"{self._dataReceiver}.ASIC1Image")
-        self.ui.PyDMImageView_3.setImageChannel(f"{self._dataReceiver}.ASIC2Image")
-        self.ui.PyDMImageView_4.setImageChannel(f"{self._dataReceiver}.ASIC3Image")
-        self.ui.PyDMImageView_5.setImageChannel(f"{self._dataReceiver}.ASIC4Image")
-        self.ui.PyDMImageView_6.setImageChannel(f"{self._dataReceiver}.ASIC5Image")
-        self.ui.PyDMImageView_7.setImageChannel(f"{self._dataReceiver}.ASIC6Image")
-        self.ui.PyDMImageView_8.setImageChannel(f"{self._dataReceiver}.ASIC7Image")
+        #self.ui.PyDMImageView_1.setImageChannel(f"{self._dataReceiver}.ASIC0Image")
+        #self.ui.PyDMImageView_2.setImageChannel(f"{self._dataReceiver}.ASIC1Image")
+        #self.ui.PyDMImageView_3.setImageChannel(f"{self._dataReceiver}.ASIC2Image")
+        #self.ui.PyDMImageView_4.setImageChannel(f"{self._dataReceiver}.ASIC3Image")
+        #self.ui.PyDMImageView_5.setImageChannel(f"{self._dataReceiver}.ASIC4Image")
+        #self.ui.PyDMImageView_6.setImageChannel(f"{self._dataReceiver}.ASIC5Image")
+        #self.ui.PyDMImageView_7.setImageChannel(f"{self._dataReceiver}.ASIC6Image")
+        #self.ui.PyDMImageView_8.setImageChannel(f"{self._dataReceiver}.ASIC7Image")
+
+        for i in np.arange(1,self._asics+1):
+            getattr(self.ui, f'PyDMImageView_{i}').setImageChannel(f'{self._dataReceiver}.ASIC{i-1}Image')
 
         self.ui.pushButton.clicked.connect(self.updateDisplay)
 
     def enable_mouse_cursor(self):
         # Enable mouse clicks to extract image coordinates
-        self.ui.PyDMImageView_1.scene.sigMouseClicked.connect(self.clickProcessImage1)
-        self.ui.PyDMImageView_2.scene.sigMouseClicked.connect(self.clickProcessImage2)
-        self.ui.PyDMImageView_3.scene.sigMouseClicked.connect(self.clickProcessImage3)
-        self.ui.PyDMImageView_4.scene.sigMouseClicked.connect(self.clickProcessImage4)
-        self.ui.PyDMImageView_5.scene.sigMouseClicked.connect(self.clickProcessImage5)
-        self.ui.PyDMImageView_6.scene.sigMouseClicked.connect(self.clickProcessImage6)
-        self.ui.PyDMImageView_7.scene.sigMouseClicked.connect(self.clickProcessImage7)
-        self.ui.PyDMImageView_8.scene.sigMouseClicked.connect(self.clickProcessImage8)
+        #self.ui.PyDMImageView_1.scene.sigMouseClicked.connect(self.clickProcessImage1)
+        #self.ui.PyDMImageView_2.scene.sigMouseClicked.connect(self.clickProcessImage2)
+        #self.ui.PyDMImageView_3.scene.sigMouseClicked.connect(self.clickProcessImage3)
+        #self.ui.PyDMImageView_4.scene.sigMouseClicked.connect(self.clickProcessImage4)
+        #self.ui.PyDMImageView_5.scene.sigMouseClicked.connect(self.clickProcessImage5)
+        #self.ui.PyDMImageView_6.scene.sigMouseClicked.connect(self.clickProcessImage6)
+        #self.ui.PyDMImageView_7.scene.sigMouseClicked.connect(self.clickProcessImage7)
+        #self.ui.PyDMImageView_8.scene.sigMouseClicked.connect(self.clickProcessImage8)
+
+        for i in np.arange(1,self._asics+1):
+            getattr(self.ui, f'PyDMImageView_{i}').scene.sigMouseClicked.connect(getattr(self, f'clickProcessImage{i}'))
 
     def get_attribute_dynamically(self, attribute_name):
         # Accessing an instance variable dynamically
@@ -133,24 +145,32 @@ class assertGUIChannelMonitoring(pydm.Display):
     def updateColorMapLimits(self):
         minContrast = int(self.ui.PyDMLineEdit_2.displayText())
         maxContrast = int(self.ui.PyDMLineEdit_3.displayText())
-        self.ui.PyDMImageView_1.setColorMapLimits(minContrast, maxContrast)
-        self.ui.PyDMImageView_2.setColorMapLimits(minContrast, maxContrast)
-        self.ui.PyDMImageView_3.setColorMapLimits(minContrast, maxContrast)
-        self.ui.PyDMImageView_4.setColorMapLimits(minContrast, maxContrast)
-        self.ui.PyDMImageView_5.setColorMapLimits(minContrast, maxContrast)
-        self.ui.PyDMImageView_6.setColorMapLimits(minContrast, maxContrast)
-        self.ui.PyDMImageView_7.setColorMapLimits(minContrast, maxContrast)
-        self.ui.PyDMImageView_8.setColorMapLimits(minContrast, maxContrast)
+        #self.ui.PyDMImageView_1.setColorMapLimits(minContrast, maxContrast)
+        #self.ui.PyDMImageView_2.setColorMapLimits(minContrast, maxContrast)
+        #self.ui.PyDMImageView_3.setColorMapLimits(minContrast, maxContrast)
+        #self.ui.PyDMImageView_4.setColorMapLimits(minContrast, maxContrast)
+        #self.ui.PyDMImageView_5.setColorMapLimits(minContrast, maxContrast)
+        #self.ui.PyDMImageView_6.setColorMapLimits(minContrast, maxContrast)
+        #self.ui.PyDMImageView_7.setColorMapLimits(minContrast, maxContrast)
+        #self.ui.PyDMImageView_8.setColorMapLimits(minContrast, maxContrast)
+
+        for i in np.arange(1,self._asics+1):
+            getattr(self.ui, f'PyDMImageView_{i}').setColorMapLimits(minContrast, maxContrast)
+
+        for i in np.arange(1,self._asics+1):
+            getattr(self, f'self.colorbar_{i}').setLevels(values=(int(self.ui.PyDMLineEdit_2.text()), int(self.ui.PyDMLineEdit_3.text())))
 
     def updateDisplay(self):
-        self.ui.PyDMImageView_1.redrawImage()
-        self.ui.PyDMImageView_2.redrawImage()
-        self.ui.PyDMImageView_3.redrawImage()
-        self.ui.PyDMImageView_4.redrawImage()
-        self.ui.PyDMImageView_5.redrawImage()
-        self.ui.PyDMImageView_6.redrawImage()
-        self.ui.PyDMImageView_7.redrawImage()
-        self.ui.PyDMImageView_8.redrawImage()
+        #self.ui.PyDMImageView_1.redrawImage()
+        #self.ui.PyDMImageView_2.redrawImage()
+        #self.ui.PyDMImageView_3.redrawImage()
+        #self.ui.PyDMImageView_4.redrawImage()
+        #self.ui.PyDMImageView_5.redrawImage()
+        #self.ui.PyDMImageView_6.redrawImage()
+        #self.ui.PyDMImageView_7.redrawImage()
+        #self.ui.PyDMImageView_8.redrawImage()
+        for i in np.arange(1,self._asics+1):
+            getattr(self.ui, f'PyDMImageView_{i}').redrawImage()
 
     # def setTimeSpan(self):
     #     self.ui.PyDMTimePlot.setTimeSpan(int(self.ui.lineEdit.text()))
