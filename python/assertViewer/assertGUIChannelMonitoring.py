@@ -7,7 +7,8 @@
 import os
 import pydm
 import numpy as np
-from pydm.widgets import PyDMLineEdit, PyDMLabel
+import pyqtgraph as pg
+from pydm.widgets import PyDMLineEdit, PyDMLabel, PyDMImageView
 from qtpy.QtWidgets import QWidget, QLabel, QGridLayout, QVBoxLayout, QSpacerItem, QSizePolicy
 
 def runChannelDisplay(dataReceiver, serverList='localhost:9090', root=None,
@@ -54,17 +55,52 @@ class assertGUIChannelMonitoring(pydm.Display):
         super().__init__(parent=parent, args=args, macros=macros)
         self._dataReceiver = macros['dataReceiver']
         #print(f'{macros=}')
-#        self.ui.PyDMImageView.scene.sigMouseClicked.connect(self.clickProcess)
-        # self.ui.PyDMLineEdit_3.textChanged.connect(self.resetPlots)
-        # self.ui.PyDMLineEdit_6.textChanged.connect(self.resetPlots)
-        # self.ui.lineEdit.textChanged.connect(self.setTimeSpan)
-        # self.ui.PyDMCheckbox_15.stateChanged.connect(self.resetPlots)
-        # self.ui.pushButton.clicked.connect(self.resetPlots)
         self.sizeX = macros['sizeX']
         self.sizeY = macros['sizeY']
         self._asics = 8
-        self.set_image_channels()
+        self._channels = 64
+        self.init_crosshair()
         self.setup_main_tab()
+        self.set_image_channels()
+        self.enable_mouse_cursor()
+
+    def init_crosshair(self):
+        for i in np.arange(1,self._asics+1):
+            v_name = f'_v_line_img{i}'
+            h_name = f'_h_line_img{i}'
+            v_val  = pg.InfiniteLine(angle=90, movable=False, pen='g')
+            h_val  = pg.InfiniteLine(angle=0,  movable=False, pen='g')
+            setattr(self, v_name, v_val)
+            setattr(self, h_name, h_val)
+
+        for i in np.arange(1,self._asics+1):
+            getattr(self.ui, f'PyDMImageView_{i}').getView().addItem(getattr(self, f'_v_line_img{i}'), ignoreBounds=False)
+            getattr(self.ui, f'PyDMImageView_{i}').getView().addItem(getattr(self, f'_h_line_img{i}'), ignoreBounds=False)
+        
+        self.clear_crosshair()
+
+    def clear_crosshair(self):
+        for i in np.arange(1,self._asics+1):
+            getattr(self, f'_v_line_img{i}').hide()
+            getattr(self, f'_h_line_img{i}').hide()
+
+    def update_crosshair(self, x, y=20, sensor=1):
+        getattr(self, f'_v_line_img{sensor}').setPos(x)
+        getattr(self, f'_h_line_img{sensor}').setPos(y)
+        getattr(self, f'_v_line_img{sensor}').show()
+        getattr(self, f'_h_line_img{sensor}').show()
+
+    def setup_main_tab(self):
+        self.ui.PyDMLineEdit_1.setChannel(f'{self._dataReceiver}.ASIC0FrameCnt')
+
+        self.ui.PyDMLineEdit_2.setChannel(f'{self._dataReceiver}.MinContrast')
+        self.ui.PyDMLineEdit_3.setChannel(f'{self._dataReceiver}.MaxContrast')
+
+        self.ui.PyDMLineEdit_4.setChannel(f'{self._dataReceiver}.MinContrast')
+        self.ui.PyDMLineEdit_4.textChanged.connect(self.updateColorMapLimits)
+
+        self.ui.PyDMLineEdit_5.setChannel(f'{self._dataReceiver}.MaxContrast')
+        self.ui.PyDMLineEdit_5.textChanged.connect(self.updateColorMapLimits)
 
     def set_image_channels(self):
         self.ui.PyDMImageView_1.setImageChannel(f"{self._dataReceiver}.ASIC0Image")
@@ -76,27 +112,25 @@ class assertGUIChannelMonitoring(pydm.Display):
         self.ui.PyDMImageView_7.setImageChannel(f"{self._dataReceiver}.ASIC6Image")
         self.ui.PyDMImageView_8.setImageChannel(f"{self._dataReceiver}.ASIC7Image")
 
-        #self.ui.PyDMImageView_1.newImageSignal.connect(self.updateDisplay)
+        self.ui.pushButton.clicked.connect(self.updateDisplay)
 
-    def setup_main_tab(self):
-        self.ui.PyDMLineEdit_1.setChannel(f'{self._dataReceiver}.ASIC0FrameCnt')
-        self.ui.PyDMLineEdit_1.textChanged.connect(self.updateDisplay)
-
-        self.ui.PyDMLineEdit_2.setChannel(f'{self._dataReceiver}.MinContrast')
-        self.ui.PyDMLineEdit_3.setChannel(f'{self._dataReceiver}.MaxContrast')
-
-        self.ui.PyDMLineEdit_4.setChannel(f'{self._dataReceiver}.MinContrast')
-        self.ui.PyDMLineEdit_4.textChanged.connect(self.updateDisplay)
-
-        self.ui.PyDMLineEdit_5.setChannel(f'{self._dataReceiver}.MaxContrast')
-        self.ui.PyDMLineEdit_5.textChanged.connect(self.updateDisplay)
+    def enable_mouse_cursor(self):
+        # Enable mouse clicks to extract image coordinates
+        self.ui.PyDMImageView_1.scene.sigMouseClicked.connect(self.clickProcessImage1)
+        self.ui.PyDMImageView_2.scene.sigMouseClicked.connect(self.clickProcessImage2)
+        self.ui.PyDMImageView_3.scene.sigMouseClicked.connect(self.clickProcessImage3)
+        self.ui.PyDMImageView_4.scene.sigMouseClicked.connect(self.clickProcessImage4)
+        self.ui.PyDMImageView_5.scene.sigMouseClicked.connect(self.clickProcessImage5)
+        self.ui.PyDMImageView_6.scene.sigMouseClicked.connect(self.clickProcessImage6)
+        self.ui.PyDMImageView_7.scene.sigMouseClicked.connect(self.clickProcessImage7)
+        self.ui.PyDMImageView_8.scene.sigMouseClicked.connect(self.clickProcessImage8)
 
     def get_attribute_dynamically(self, attribute_name):
         # Accessing an instance variable dynamically
         instance_attr = getattr(self, attribute_name, "Attribute not found")
         return instance_attr
 
-    def updateDisplay(self):
+    def updateColorMapLimits(self):
         minContrast = int(self.ui.PyDMLineEdit_2.displayText())
         maxContrast = int(self.ui.PyDMLineEdit_3.displayText())
         self.ui.PyDMImageView_1.setColorMapLimits(minContrast, maxContrast)
@@ -108,31 +142,75 @@ class assertGUIChannelMonitoring(pydm.Display):
         self.ui.PyDMImageView_7.setColorMapLimits(minContrast, maxContrast)
         self.ui.PyDMImageView_8.setColorMapLimits(minContrast, maxContrast)
 
+    def updateDisplay(self):
+        self.ui.PyDMImageView_1.redrawImage()
+        self.ui.PyDMImageView_2.redrawImage()
+        self.ui.PyDMImageView_3.redrawImage()
+        self.ui.PyDMImageView_4.redrawImage()
+        self.ui.PyDMImageView_5.redrawImage()
+        self.ui.PyDMImageView_6.redrawImage()
+        self.ui.PyDMImageView_7.redrawImage()
+        self.ui.PyDMImageView_8.redrawImage()
+
     # def setTimeSpan(self):
     #     self.ui.PyDMTimePlot.setTimeSpan(int(self.ui.lineEdit.text()))
 
-    def clickProcess(self, event):
-        pass
-#        pos = self.ui.PyDMImageView.getView().getViewBox().mapSceneToView(event.scenePos())
-#        if self.sizeX != 0 and int(pos.x()) > self.sizeX :
-#            x = str(self.sizeX-1)
-#        elif int(pos.x()) < 0 :
-#            x = str(0)
-#        else :
-#            x = str(int(pos.x()))
-#
-#        if self.sizeY != 0 and  int(pos.y()) > self.sizeY :
-#            y = str(self.sizeY-1)
-#        elif int(pos.y()) < 0 :
-#            y = str(0)
-#        else :
-#            y = str(int(pos.y()))
-#
-#        self.ui.PyDMLineEdit_2.setText(x)
-#        self.ui.PyDMLineEdit_2.send_value()
-#        self.ui.PyDMLineEdit_6.setText(y)
-#        self.ui.PyDMLineEdit_6.send_value()
+    def clickProcessImage1(self, event):
+        pos = self.ui.PyDMImageView_1.getView().getViewBox().mapSceneToView(event.scenePos())
+        self.perform_error_checking(pos, 1)
 
+    def clickProcessImage2(self, event):
+        pos = self.ui.PyDMImageView_2.getView().getViewBox().mapSceneToView(event.scenePos())
+        self.perform_error_checking(pos, 2)
+
+    def clickProcessImage3(self, event):
+        pos = self.ui.PyDMImageView_3.getView().getViewBox().mapSceneToView(event.scenePos())
+        self.perform_error_checking(pos, 3)
+
+    def clickProcessImage4(self, event):
+        pos = self.ui.PyDMImageView_4.getView().getViewBox().mapSceneToView(event.scenePos())
+        self.perform_error_checking(pos, 4)
+
+    def clickProcessImage5(self, event):
+        pos = self.ui.PyDMImageView_5.getView().getViewBox().mapSceneToView(event.scenePos())
+        self.perform_error_checking(pos, 5)
+
+    def clickProcessImage6(self, event):
+        pos = self.ui.PyDMImageView_6.getView().getViewBox().mapSceneToView(event.scenePos())
+        self.perform_error_checking(pos, 6)
+
+    def clickProcessImage7(self, event):
+        pos = self.ui.PyDMImageView_7.getView().getViewBox().mapSceneToView(event.scenePos())
+        self.perform_error_checking(pos, 7)
+
+    def clickProcessImage8(self, event):
+        pos = self.ui.PyDMImageView_8.getView().getViewBox().mapSceneToView(event.scenePos())
+        self.perform_error_checking(pos, 8)
+
+    def perform_error_checking(self, pos, sensor):
+        if int(pos.x()) >= self._channels:
+            x = self._channels - 1
+        elif int(pos.x()) < 0:
+            x = 0
+        else:
+            x = int(pos.x())
+
+        self.clear_crosshair()
+        self.update_crosshair(x,sensor=sensor)
+
+        self.ui.PyDMLineEdit_6.setText(str(x))
+        self.ui.PyDMLineEdit_7.setText(str(sensor))
+        
+        self.update_channel_timeplot()
+        self.update_all_channels_plot(sensor)
+    
+    def update_channel_timeplot(self):
+        pass
+
+    def update_all_channels_plot(self, sensor):
+        self.ui.PyDMWaveformPlot_2.clearCurves()
+        self.ui.PyDMWaveformPlot_2.addChannel(y_channel = f'{self._dataReceiver}.ASIC{sensor-1}Sig',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName     = "ADC Counts") 
+ 
     def ui_filename(self):
         # Point to the UI file
         return 'ui/assertViewerPyDM_StripMonitoring.ui'
