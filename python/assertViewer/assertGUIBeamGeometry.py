@@ -14,6 +14,7 @@ from qtpy.QtWidgets import QWidget, QLabel, QGridLayout, QVBoxLayout, QSpacerIte
 import rogue
 import pyrogue as pr
 import pyqtgraph as pg
+from pyqtgraph.Qt import QtCore, QtWidgets
 
 def runBeamDisplay(dataReceiver,serverList='localhost:9090',port='9090',root=None,
                    title=None,sizeX=800,sizeY=1000,maxListExpand=5,maxListSize=100):
@@ -226,22 +227,22 @@ class assertGUIBeamGeometry(pydm.Display):
         d = [20, 20]
         if len(counts1) and len(counts2):
             if getattr(self, '_roi_circle_1', None) is not None: self.ui.graphicsView_1.removeItem(self._roi_circle_1)
-            self._roi_circle_1 = pg.CircleROI([max_index_1-10,max_index_2-10], d, pen=pg.mkPen('r', width=1), movable=False, resizable=False) 
+            self._roi_circle_1 = pg.CircleROI([max_index_1-10,max_index_2-10], d, pen=pg.mkPen('m', width=1, style=QtCore.Qt.DashLine), movable=False, resizable=False) 
             self.ui.graphicsView_1.addItem(self._roi_circle_1)
             self._roi_circle_1.aspectLocked = True
         if len(counts3) and len(counts4): 
             if getattr(self, '_roi_circle_2', None) is not None: self.ui.graphicsView_2.removeItem(self._roi_circle_2)
-            self._roi_circle_2 = pg.CircleROI([max_index_3-10,max_index_4-10], d, pen=pg.mkPen('r', width=1), movable=False, resizable=False) 
+            self._roi_circle_2 = pg.CircleROI([max_index_3-10,max_index_4-10], d, pen=pg.mkPen('m', width=1, style=QtCore.Qt.DashLine), movable=False, resizable=False) 
             self.ui.graphicsView_2.addItem(self._roi_circle_2)
             self._roi_circle_2.aspectLocked = True
         if len(counts5) and len(counts6): 
             if getattr(self, '_roi_circle_3', None) is not None: self.ui.graphicsView_3.removeItem(self._roi_circle_3)
-            self._roi_circle_3 = pg.CircleROI([max_index_5-10,max_index_6-10], d, pen=pg.mkPen('r', width=1), movable=False, resizable=False) 
+            self._roi_circle_3 = pg.CircleROI([max_index_5-10,max_index_6-10], d, pen=pg.mkPen('m', width=1, style=QtCore.Qt.DashLine), movable=False, resizable=False) 
             self.ui.graphicsView_3.addItem(self._roi_circle_3)
             self._roi_circle_3.aspectLocked = True
         if len(counts7) and len(counts8): 
             if getattr(self, '_roi_circle_4', None) is not None: self.ui.graphicsView_4.removeItem(self._roi_circle_4)
-            self._roi_circle_4 = pg.CircleROI([max_index_7-10,max_index_8-10], d, pen=pg.mkPen('r', width=1), movable=False, resizable=False) 
+            self._roi_circle_4 = pg.CircleROI([max_index_7-10,max_index_8-10], d, pen=pg.mkPen('m', width=1, style=QtCore.Qt.DashLine), movable=False, resizable=False) 
             self.ui.graphicsView_4.addItem(self._roi_circle_4)
             self._roi_circle_4.aspectLocked = True
 
