@@ -247,7 +247,7 @@
       </widget>
      </item>
      <item row="2" column="4">
-      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_2">
+      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_1">
        <property name="maximumSize">
         <size>
          <width>750</width>
@@ -367,7 +367,7 @@
       </widget>
      </item>
      <item row="4" column="4">
-      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot">
+      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_2">
        <property name="maximumSize">
         <size>
          <width>750</width>
