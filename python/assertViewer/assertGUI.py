@@ -55,13 +55,6 @@ class assertGUI(pydm.Display):
         # print(f'{macros=}')
         self._asics = 8
         self._dataReceiver = macros['dataReceiver']
-#        self.ui.PyDMImageView.newImageSignal.connect(self.updateDisplay)
-#        self.ui.PyDMImageView.scene.sigMouseClicked.connect(self.clickProcess)
-        # self.ui.PyDMLineEdit_3.textChanged.connect(self.resetPlots)
-        # self.ui.PyDMLineEdit_6.textChanged.connect(self.resetPlots)
-        # self.ui.lineEdit.textChanged.connect(self.setTimeSpan)
-        # self.ui.PyDMCheckbox_15.stateChanged.connect(self.resetPlots)
-        # self.ui.pushButton.clicked.connect(self.resetPlots)
         self.sizeX = macros['sizeX']
         self.sizeY = macros['sizeY']
         self.setup_main_tab()
@@ -95,7 +88,6 @@ class assertGUI(pydm.Display):
         return instance_attr
 
     def onClick_updatePlots(self):
-        #print('Update the plots ...\n')
 
         self.resetPlots()
 
@@ -113,150 +105,34 @@ class assertGUI(pydm.Display):
 
         # Depending on the configuration, update the curves with the appropriate counts  
         if noise_checkbox.isChecked() and pedestals_checkbox.isChecked() and cm_checkbox.isChecked():
-            #self.ui.PyDMWaveformPlot_1.addChannel(y_channel = f'{self._dataReceiver}.ASIC0SigNosPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_2.addChannel(y_channel = f'{self._dataReceiver}.ASIC1SigNosPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_3.addChannel(y_channel = f'{self._dataReceiver}.ASIC2SigNosPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_4.addChannel(y_channel = f'{self._dataReceiver}.ASIC3SigNosPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_5.addChannel(y_channel = f'{self._dataReceiver}.ASIC4SigNosPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_6.addChannel(y_channel = f'{self._dataReceiver}.ASIC5SigNosPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_7.addChannel(y_channel = f'{self._dataReceiver}.ASIC6SigNosPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_8.addChannel(y_channel = f'{self._dataReceiver}.ASIC7SigNosPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
             for i in np.arange(1,self._asics+1):
                 getattr(self.ui, f'PyDMWaveformPlot_{i}').addChannel(y_channel = f'{self._dataReceiver}.ASIC{i-1}SigNosPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
         elif noise_checkbox.isChecked() and pedestals_checkbox.isChecked():
-            #self.ui.PyDMWaveformPlot_1.addChannel(y_channel = f'{self._dataReceiver}.ASIC0SigNosPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_2.addChannel(y_channel = f'{self._dataReceiver}.ASIC1SigNosPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_3.addChannel(y_channel = f'{self._dataReceiver}.ASIC2SigNosPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_4.addChannel(y_channel = f'{self._dataReceiver}.ASIC3SigNosPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_5.addChannel(y_channel = f'{self._dataReceiver}.ASIC4SigNosPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_6.addChannel(y_channel = f'{self._dataReceiver}.ASIC5SigNosPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_7.addChannel(y_channel = f'{self._dataReceiver}.ASIC6SigNosPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_8.addChannel(y_channel = f'{self._dataReceiver}.ASIC7SigNosPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
             for i in np.arange(1,self._asics+1):
                 getattr(self.ui, f'PyDMWaveformPlot_{i}').addChannel(y_channel = f'{self._dataReceiver}.ASIC{i-1}SigNosPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
         elif noise_checkbox.isChecked() and cm_checkbox.isChecked():
-            # Displaying signal with noise for now
-            #self.ui.PyDMWaveformPlot_1.addChannel(y_channel = f'{self._dataReceiver}.ASIC0SigNos',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_2.addChannel(y_channel = f'{self._dataReceiver}.ASIC1SigNos',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_3.addChannel(y_channel = f'{self._dataReceiver}.ASIC2SigNos',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_4.addChannel(y_channel = f'{self._dataReceiver}.ASIC3SigNos',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_5.addChannel(y_channel = f'{self._dataReceiver}.ASIC4SigNos',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_6.addChannel(y_channel = f'{self._dataReceiver}.ASIC5SigNos',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_7.addChannel(y_channel = f'{self._dataReceiver}.ASIC6SigNos',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_8.addChannel(y_channel = f'{self._dataReceiver}.ASIC7SigNos',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
             for i in np.arange(1,self._asics+1):
                 getattr(self.ui, f'PyDMWaveformPlot_{i}').addChannel(y_channel = f'{self._dataReceiver}.ASIC{i-1}SigNos',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
         elif pedestals_checkbox.isChecked() and cm_checkbox.isChecked():
-            # Displaying signal with pedestals for now
-            #self.ui.PyDMWaveformPlot_1.addChannel(y_channel = f'{self._dataReceiver}.ASIC0SigPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_2.addChannel(y_channel = f'{self._dataReceiver}.ASIC1SigPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_3.addChannel(y_channel = f'{self._dataReceiver}.ASIC2SigPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_4.addChannel(y_channel = f'{self._dataReceiver}.ASIC3SigPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_5.addChannel(y_channel = f'{self._dataReceiver}.ASIC4SigPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_6.addChannel(y_channel = f'{self._dataReceiver}.ASIC5SigPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_7.addChannel(y_channel = f'{self._dataReceiver}.ASIC6SigPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_8.addChannel(y_channel = f'{self._dataReceiver}.ASIC7SigPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
             for i in np.arange(1,self._asics+1):
                 getattr(self.ui, f'PyDMWaveformPlot_{i}').addChannel(y_channel = f'{self._dataReceiver}.ASIC{i-1}SigPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
         elif noise_checkbox.isChecked():
-            #self.ui.PyDMWaveformPlot_1.addChannel(y_channel = f'{self._dataReceiver}.ASIC0SigNos',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_2.addChannel(y_channel = f'{self._dataReceiver}.ASIC1SigNos',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_3.addChannel(y_channel = f'{self._dataReceiver}.ASIC2SigNos',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_4.addChannel(y_channel = f'{self._dataReceiver}.ASIC3SigNos',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_5.addChannel(y_channel = f'{self._dataReceiver}.ASIC4SigNos',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_6.addChannel(y_channel = f'{self._dataReceiver}.ASIC5SigNos',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_7.addChannel(y_channel = f'{self._dataReceiver}.ASIC6SigNos',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_8.addChannel(y_channel = f'{self._dataReceiver}.ASIC7SigNos',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
             for i in np.arange(1,self._asics+1):
                 getattr(self.ui, f'PyDMWaveformPlot_{i}').addChannel(y_channel = f'{self._dataReceiver}.ASIC{i-1}SigNos',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
         elif pedestals_checkbox.isChecked():
-            #self.ui.PyDMWaveformPlot_1.addChannel(y_channel = f'{self._dataReceiver}.ASIC0SigPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_2.addChannel(y_channel = f'{self._dataReceiver}.ASIC1SigPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_3.addChannel(y_channel = f'{self._dataReceiver}.ASIC2SigPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_4.addChannel(y_channel = f'{self._dataReceiver}.ASIC3SigPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_5.addChannel(y_channel = f'{self._dataReceiver}.ASIC4SigPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_6.addChannel(y_channel = f'{self._dataReceiver}.ASIC5SigPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_7.addChannel(y_channel = f'{self._dataReceiver}.ASIC6SigPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_8.addChannel(y_channel = f'{self._dataReceiver}.ASIC7SigPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
             for i in np.arange(1,self._asics+1):
                 getattr(self.ui, f'PyDMWaveformPlot_{i}').addChannel(y_channel = f'{self._dataReceiver}.ASIC{i-1}SigPed',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
         elif cm_checkbox.isChecked():
             # Displaying pure signals for now
-            #self.ui.PyDMWaveformPlot_1.addChannel(y_channel = f'{self._dataReceiver}.ASIC0Sig',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_2.addChannel(y_channel = f'{self._dataReceiver}.ASIC1Sig',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_3.addChannel(y_channel = f'{self._dataReceiver}.ASIC2Sig',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_4.addChannel(y_channel = f'{self._dataReceiver}.ASIC3Sig',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_5.addChannel(y_channel = f'{self._dataReceiver}.ASIC4Sig',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_6.addChannel(y_channel = f'{self._dataReceiver}.ASIC5Sig',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_7.addChannel(y_channel = f'{self._dataReceiver}.ASIC6Sig',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_8.addChannel(y_channel = f'{self._dataReceiver}.ASIC7Sig',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
             for i in np.arange(1,self._asics+1):
                 getattr(self.ui, f'PyDMWaveformPlot_{i}').addChannel(y_channel = f'{self._dataReceiver}.ASIC{i-1}Sig',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
         elif not noise_checkbox.isChecked() and not pedestals_checkbox.isChecked() and not cm_checkbox.isChecked():
-            #self.ui.PyDMWaveformPlot_1.addChannel(y_channel = f'{self._dataReceiver}.ASIC0Sig',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_2.addChannel(y_channel = f'{self._dataReceiver}.ASIC1Sig',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_3.addChannel(y_channel = f'{self._dataReceiver}.ASIC2Sig',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_4.addChannel(y_channel = f'{self._dataReceiver}.ASIC3Sig',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_5.addChannel(y_channel = f'{self._dataReceiver}.ASIC4Sig',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_6.addChannel(y_channel = f'{self._dataReceiver}.ASIC5Sig',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_7.addChannel(y_channel = f'{self._dataReceiver}.ASIC6Sig',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
-            #self.ui.PyDMWaveformPlot_8.addChannel(y_channel = f'{self._dataReceiver}.ASIC7Sig',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
             for i in np.arange(1,self._asics+1):
                 getattr(self.ui, f'PyDMWaveformPlot_{i}').addChannel(y_channel = f'{self._dataReceiver}.ASIC{i-1}Sig',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
         else:
             pass
 
-    def updateDisplay(self):
-        pass
-#        maxContrast = int(self.ui.PyDMLineEdit_5.displayText())
-#        minContrast = int(self.ui.PyDMLineEdit_4.displayText())
-#        self.ui.PyDMImageView.setColorMapLimits(minContrast, maxContrast)
-
-    # def setTimeSpan(self):
-    #     self.ui.PyDMTimePlot.setTimeSpan(int(self.ui.lineEdit.text()))
-
-    def clickProcess(self, event):
-        pass
-#        pos = self.ui.PyDMImageView.getView().getViewBox().mapSceneToView(event.scenePos())
-#        if self.sizeX != 0 and int(pos.x()) > self.sizeX :
-#            x = str(self.sizeX-1)
-#        elif int(pos.x()) < 0 :
-#            x = str(0)
-#        else :
-#            x = str(int(pos.x()))
-#
-#        if self.sizeY != 0 and  int(pos.y()) > self.sizeY :
-#            y = str(self.sizeY-1)
-#        elif int(pos.y()) < 0 :
-#            y = str(0)
-#        else :
-#            y = str(int(pos.y()))
-#
-#        self.ui.PyDMLineEdit_2.setText(x)
-#        self.ui.PyDMLineEdit_2.send_value()
-#        self.ui.PyDMLineEdit_6.setText(y)
-#        self.ui.PyDMLineEdit_6.send_value()
-
     def resetPlots(self):
-    #     self.ui.PyDMTimePlot.removeYChannel(self.ui.PyDMTimePlot.findCurve(
-    #         f'{self._dataReceiver}.PixelData'))
-    #     self.ui.PyDMTimePlot.addYChannel(
-    #         y_channel = f'{self._dataReceiver}.PixelData',
-    #         name = "Pixel counts",
-    #         plot_style = "Line",
-    #         color = "white",
-    #         lineWidth = 1)
-         #print('Reset the plots...\n')
-         #for asic in np.linspace(1,self._asics,self._asics):
-         #   self.ui.get_attribute_dynamically(f'PyDMWaveformPlot_{asic}').clearCurves()
-         #self.ui.PyDMWaveformPlot_1.clearCurves()
-         #self.ui.PyDMWaveformPlot_2.clearCurves()
-         #self.ui.PyDMWaveformPlot_3.clearCurves()
-         #self.ui.PyDMWaveformPlot_4.clearCurves()
-         #self.ui.PyDMWaveformPlot_5.clearCurves()
-         #self.ui.PyDMWaveformPlot_6.clearCurves()
-         #self.ui.PyDMWaveformPlot_7.clearCurves()
-         #self.ui.PyDMWaveformPlot_8.clearCurves()
         for i in np.arange(1,self._asics+1):
             getattr(self.ui, f'PyDMWaveformPlot_{i}').clearCurves()
 
