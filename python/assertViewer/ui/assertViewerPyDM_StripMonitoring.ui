@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>2451</width>
-    <height>1061</height>
+    <width>2474</width>
+    <height>1081</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -276,6 +276,9 @@
              <property name="toolTip">
               <string/>
              </property>
+             <property name="text">
+              <string>4000</string>
+             </property>
              <property name="readOnly">
               <bool>true</bool>
              </property>
@@ -324,6 +327,9 @@
              <property name="toolTip">
               <string/>
              </property>
+             <property name="text">
+              <string>N/A</string>
+             </property>
              <property name="readOnly">
               <bool>true</bool>
              </property>
@@ -351,6 +357,9 @@
              <property name="toolTip">
               <string/>
              </property>
+             <property name="text">
+              <string>1</string>
+             </property>
             </widget>
            </item>
            <item row="2" column="0">
@@ -366,7 +375,7 @@
               <string/>
              </property>
              <property name="text">
-              <string>255</string>
+              <string>4000</string>
              </property>
             </widget>
            </item>
@@ -392,12 +401,18 @@
              <property name="toolTip">
               <string/>
              </property>
+             <property name="text">
+              <string>0</string>
+             </property>
             </widget>
            </item>
            <item row="1" column="3">
             <widget class="PyDMLineEdit" name="PyDMLineEdit_4">
              <property name="toolTip">
               <string/>
+             </property>
+             <property name="text">
+              <string>0</string>
              </property>
              <property name="readOnly">
               <bool>true</bool>
@@ -500,6 +515,11 @@
        <property name="title" stdset="0">
         <string>Channel - Count History</string>
        </property>
+       <property name="xLabels">
+        <stringlist>
+         <string>Samples</string>
+        </stringlist>
+       </property>
        <property name="showLegend">
         <bool>true</bool>
        </property>
@@ -556,6 +576,11 @@
        </property>
        <property name="title" stdset="0">
         <string>Channel - Histogram</string>
+       </property>
+       <property name="xLabels">
+        <stringlist>
+         <string>Bins</string>
+        </stringlist>
        </property>
        <property name="showLegend">
         <bool>true</bool>
