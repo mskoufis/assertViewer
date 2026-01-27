@@ -221,15 +221,16 @@ class assertGUIChannelMonitoring(pydm.Display):
         self.ui.PyDMLineEdit_6.setText(str(x))
         self.ui.PyDMLineEdit_7.setText(str(sensor))
         
-        self.update_channel_timeplot()
+        self.update_channel_timeplot(sensor,x)
         self.update_all_channels_plot(sensor)
     
-    def update_channel_timeplot(self):
-        pass
+    def update_channel_timeplot(self, sensor, channel):
+        self.ui.PyDMWaveformPlot_1.clearCurves()
+        self.ui.PyDMWaveformPlot_1.addChannel(y_channel = f'{self._dataReceiver}.ASIC{sensor-1}CntHist{channel}',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts") 
 
     def update_all_channels_plot(self, sensor):
         self.ui.PyDMWaveformPlot_2.clearCurves()
-        self.ui.PyDMWaveformPlot_2.addChannel(y_channel = f'{self._dataReceiver}.ASIC{sensor-1}Sig',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName     = "ADC Counts") 
+        self.ui.PyDMWaveformPlot_2.addChannel(y_channel = f'{self._dataReceiver}.ASIC{sensor-1}Sig',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts") 
  
     def ui_filename(self):
         # Point to the UI file

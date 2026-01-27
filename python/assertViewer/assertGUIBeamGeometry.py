@@ -61,6 +61,7 @@ class assertGUIBeamGeometry(pydm.Display):
         super().__init__(parent=parent, args=args, macros=macros)
         # print(f'{macros=}')
         self._asics = 8
+        self._channels = 64
         self._port = macros['port']
         self._dataReceiver = macros['dataReceiver']
         self.sizeX = macros['sizeX']
@@ -82,55 +83,72 @@ class assertGUIBeamGeometry(pydm.Display):
        
     def setup_plots(self):
         # Add legends
-        self.ui.graphicsView_1.addLegend()
-        self.ui.graphicsView_2.addLegend()
-        self.ui.graphicsView_3.addLegend()
-        self.ui.graphicsView_4.addLegend()
+        #self.ui.graphicsView_1.addLegend()
+        #self.ui.graphicsView_2.addLegend()
+        #self.ui.graphicsView_3.addLegend()
+        #self.ui.graphicsView_4.addLegend()
+        for i in np.arange(1,int(self._asics/2)+1):
+            getattr(self.ui, f'graphicsView_{i}').addLegend() 
 
         # Add error bars
-        x=np.zeros(64)
-        y=np.zeros(64)
-        err=np.zeros(64)
-        self._error_bars_1 = pg.ErrorBarItem(beam=0.5, pen={'color': 'w', 'width': 1})
-        self._error_bars_2 = pg.ErrorBarItem(beam=0.5, pen={'color': 'w', 'width': 1})
-        self._error_bars_3 = pg.ErrorBarItem(beam=0.5, pen={'color': 'w', 'width': 1})
-        self._error_bars_4 = pg.ErrorBarItem(beam=0.5, pen={'color': 'w', 'width': 1})
-        self.ui.graphicsView_1.addItem(self._error_bars_1)
-        self.ui.graphicsView_2.addItem(self._error_bars_2)
-        self.ui.graphicsView_3.addItem(self._error_bars_3)
-        self.ui.graphicsView_4.addItem(self._error_bars_4)
-        self._error_bars_1.setData(x=x,y=y,top=err,bottom=err)
-        self._error_bars_2.setData(x=x,y=y,top=err,bottom=err)
-        self._error_bars_3.setData(x=x,y=y,top=err,bottom=err)
-        self._error_bars_4.setData(x=x,y=y,top=err,bottom=err)
+        x=np.zeros  (self._channels)
+        y=np.zeros  (self._channels)
+        err=np.zeros(self._channels)
+        #self._error_bars_1 = pg.ErrorBarItem(beam=0.5, pen={'color': 'w', 'width': 1})
+        #self._error_bars_2 = pg.ErrorBarItem(beam=0.5, pen={'color': 'w', 'width': 1})
+        #self._error_bars_3 = pg.ErrorBarItem(beam=0.5, pen={'color': 'w', 'width': 1})
+        #self._error_bars_4 = pg.ErrorBarItem(beam=0.5, pen={'color': 'w', 'width': 1})
+        for i in np.arange(1,int(self._asics/2)+1):
+            setattr(self, f'self._error_bars_{i}', pg.ErrorBarItem(beam=0.5, pen={'color': 'w', 'width': 1})) 
+        #self.ui.graphicsView_1.addItem(self._error_bars_1)
+        #self.ui.graphicsView_2.addItem(self._error_bars_2)
+        #self.ui.graphicsView_3.addItem(self._error_bars_3)
+        #self.ui.graphicsView_4.addItem(self._error_bars_4)
+        for i in np.arange(1,int(self._asics/2)+1):
+            getattr(self.ui, f'graphicsView_{i}').addItem(getattr(self,f'self._error_bars_{i}')) 
+        #self._error_bars_1.setData(x=x,y=y,top=err,bottom=err)
+        #self._error_bars_2.setData(x=x,y=y,top=err,bottom=err)
+        #self._error_bars_3.setData(x=x,y=y,top=err,bottom=err)
+        #self._error_bars_4.setData(x=x,y=y,top=err,bottom=err)
+        for i in np.arange(1,int(self._asics/2)+1):
+            getattr(self, f'self._error_bars_{i}').setData(x=x,y=y,top=err,bottom=err) 
 
         # Show grid
-        self.ui.graphicsView_1.showGrid(x=True, y=True)
-        self.ui.graphicsView_2.showGrid(x=True, y=True)
-        self.ui.graphicsView_3.showGrid(x=True, y=True)
-        self.ui.graphicsView_4.showGrid(x=True, y=True)
+        #self.ui.graphicsView_1.showGrid(x=True, y=True)
+        #self.ui.graphicsView_2.showGrid(x=True, y=True)
+        #self.ui.graphicsView_3.showGrid(x=True, y=True)
+        #self.ui.graphicsView_4.showGrid(x=True, y=True)
+        for i in np.arange(1,int(self._asics/2)+1):
+            getattr(self.ui, f'graphicsView_{i}').showGrid(x=True, y=True) 
 
         # Add x-axis labels
-        self.ui.graphicsView_1.setLabel("bottom", "X-coordinate")
-        self.ui.graphicsView_2.setLabel("bottom", "X-coordinate")
-        self.ui.graphicsView_3.setLabel("bottom", "X-coordinate")
-        self.ui.graphicsView_4.setLabel("bottom", "X-coordinate")
+        #self.ui.graphicsView_1.setLabel("bottom", "X-coordinate")
+        #self.ui.graphicsView_2.setLabel("bottom", "X-coordinate")
+        #self.ui.graphicsView_3.setLabel("bottom", "X-coordinate")
+        #self.ui.graphicsView_4.setLabel("bottom", "X-coordinate")
+        for i in np.arange(1,int(self._asics/2)+1):
+            getattr(self.ui, f'graphicsView_{i}').setLabel("bottom", "X-coordinate") 
 
         # Add y-axis labels 
-        self.ui.graphicsView_1.setLabel("left", "Y-coordinate")
-        self.ui.graphicsView_2.setLabel("left", "Y-coordinate")
-        self.ui.graphicsView_3.setLabel("left", "Y-coordinate")
-        self.ui.graphicsView_4.setLabel("left", "Y-coordinate")
+        #self.ui.graphicsView_1.setLabel("left", "Y-coordinate")
+        #self.ui.graphicsView_2.setLabel("left", "Y-coordinate")
+        #self.ui.graphicsView_3.setLabel("left", "Y-coordinate")
+        #self.ui.graphicsView_4.setLabel("left", "Y-coordinate")
+        for i in np.arange(1,int(self._asics/2)+1):
+            getattr(self.ui, f'graphicsView_{i}').setLabel("left", "Y-coordinate") 
 
         # Set X and Y ranges
-        self.ui.graphicsView_1.setXRange(0, 70, padding=0)
-        self.ui.graphicsView_1.setYRange(0, 70, padding=0)
-        self.ui.graphicsView_2.setXRange(0, 70, padding=0)
-        self.ui.graphicsView_2.setYRange(0, 70, padding=0)
-        self.ui.graphicsView_3.setXRange(0, 70, padding=0)
-        self.ui.graphicsView_3.setYRange(0, 70, padding=0)
-        self.ui.graphicsView_4.setXRange(0, 70, padding=0)
-        self.ui.graphicsView_4.setYRange(0, 70, padding=0)
+        #self.ui.graphicsView_1.setXRange(0, 70, padding=0)
+        #self.ui.graphicsView_1.setYRange(0, 70, padding=0)
+        #self.ui.graphicsView_2.setXRange(0, 70, padding=0)
+        #self.ui.graphicsView_2.setYRange(0, 70, padding=0)
+        #self.ui.graphicsView_3.setXRange(0, 70, padding=0)
+        #self.ui.graphicsView_3.setYRange(0, 70, padding=0)
+        #self.ui.graphicsView_4.setXRange(0, 70, padding=0)
+        #self.ui.graphicsView_4.setYRange(0, 70, padding=0)
+        for i in np.arange(1,int(self._asics/2)+1):
+            getattr(self.ui, f'graphicsView_{i}').setXRange(0, 70, padding=0) 
+            getattr(self.ui, f'graphicsView_{i}').setYRange(0, 70, padding=0) 
 
         # Create plot items
         self._plot_item_1 = self.ui.graphicsView_1.plot(x=[], y=[], symbol='o', pen=None, symbolPen={'color': 'm', 'width': 2}, symbolBrush="m", symbolSize=8, name="Beam Geometry (sensor planes 1 & 2)")
@@ -218,43 +236,46 @@ class assertGUIBeamGeometry(pydm.Display):
 
         ## Add error bars
         err = np.full(1,3)
-        if len(counts1) and len(counts2): self._error_bars_1.setData(x=np.array([max_index_1]), y=np.array([max_index_2]), top=err, bottom=err)
-        if len(counts3) and len(counts4): self._error_bars_2.setData(x=np.array([max_index_3]), y=np.array([max_index_4]), top=err, bottom=err)
-        if len(counts5) and len(counts6): self._error_bars_3.setData(x=np.array([max_index_5]), y=np.array([max_index_6]), top=err, bottom=err)
-        if len(counts7) and len(counts8): self._error_bars_4.setData(x=np.array([max_index_7]), y=np.array([max_index_8]), top=err, bottom=err)
+        if len(counts1) and len(counts2): getattr(self, 'self._error_bars_1').setData(x=np.array([max_index_1]), y=np.array([max_index_2]), top=err, bottom=err)
+        if len(counts3) and len(counts4): getattr(self, 'self._error_bars_2').setData(x=np.array([max_index_3]), y=np.array([max_index_4]), top=err, bottom=err)
+        if len(counts5) and len(counts6): getattr(self, 'self._error_bars_3').setData(x=np.array([max_index_5]), y=np.array([max_index_6]), top=err, bottom=err)
+        if len(counts7) and len(counts8): getattr(self, 'self._error_bars_4').setData(x=np.array([max_index_7]), y=np.array([max_index_8]), top=err, bottom=err)
 
         # Add beam widths (ROI circles)
-        d = [20, 20]
+        d = [40, 40]
         if len(counts1) and len(counts2):
             if getattr(self, '_roi_circle_1', None) is not None: self.ui.graphicsView_1.removeItem(self._roi_circle_1)
-            self._roi_circle_1 = pg.CircleROI([max_index_1-10,max_index_2-10], d, pen=pg.mkPen('m', width=1, style=QtCore.Qt.DashLine), movable=False, resizable=False) 
+            self._roi_circle_1 = pg.CircleROI([max_index_1-20,max_index_2-20], d, pen=pg.mkPen('m', width=2, style=QtCore.Qt.DashLine), movable=False, resizable=False) 
             self.ui.graphicsView_1.addItem(self._roi_circle_1)
             self._roi_circle_1.aspectLocked = True
         if len(counts3) and len(counts4): 
             if getattr(self, '_roi_circle_2', None) is not None: self.ui.graphicsView_2.removeItem(self._roi_circle_2)
-            self._roi_circle_2 = pg.CircleROI([max_index_3-10,max_index_4-10], d, pen=pg.mkPen('m', width=1, style=QtCore.Qt.DashLine), movable=False, resizable=False) 
+            self._roi_circle_2 = pg.CircleROI([max_index_3-20,max_index_4-20], d, pen=pg.mkPen('m', width=2, style=QtCore.Qt.DashLine), movable=False, resizable=False) 
             self.ui.graphicsView_2.addItem(self._roi_circle_2)
             self._roi_circle_2.aspectLocked = True
         if len(counts5) and len(counts6): 
             if getattr(self, '_roi_circle_3', None) is not None: self.ui.graphicsView_3.removeItem(self._roi_circle_3)
-            self._roi_circle_3 = pg.CircleROI([max_index_5-10,max_index_6-10], d, pen=pg.mkPen('m', width=1, style=QtCore.Qt.DashLine), movable=False, resizable=False) 
+            self._roi_circle_3 = pg.CircleROI([max_index_5-20,max_index_6-20], d, pen=pg.mkPen('m', width=2, style=QtCore.Qt.DashLine), movable=False, resizable=False) 
             self.ui.graphicsView_3.addItem(self._roi_circle_3)
             self._roi_circle_3.aspectLocked = True
         if len(counts7) and len(counts8): 
             if getattr(self, '_roi_circle_4', None) is not None: self.ui.graphicsView_4.removeItem(self._roi_circle_4)
-            self._roi_circle_4 = pg.CircleROI([max_index_7-10,max_index_8-10], d, pen=pg.mkPen('m', width=1, style=QtCore.Qt.DashLine), movable=False, resizable=False) 
+            self._roi_circle_4 = pg.CircleROI([max_index_7-20,max_index_8-20], d, pen=pg.mkPen('m', width=2, style=QtCore.Qt.DashLine), movable=False, resizable=False) 
             self.ui.graphicsView_4.addItem(self._roi_circle_4)
             self._roi_circle_4.aspectLocked = True
 
         # Set X and Y ranges
-        self.ui.graphicsView_1.setXRange(0, 70, padding=0)
-        self.ui.graphicsView_1.setYRange(0, 70, padding=0)
-        self.ui.graphicsView_2.setXRange(0, 70, padding=0)
-        self.ui.graphicsView_2.setYRange(0, 70, padding=0)
-        self.ui.graphicsView_3.setXRange(0, 70, padding=0)
-        self.ui.graphicsView_3.setYRange(0, 70, padding=0)
-        self.ui.graphicsView_4.setXRange(0, 70, padding=0)
-        self.ui.graphicsView_4.setYRange(0, 70, padding=0)
+        #self.ui.graphicsView_1.setXRange(0, 70, padding=0)
+        #self.ui.graphicsView_1.setYRange(0, 70, padding=0)
+        #self.ui.graphicsView_2.setXRange(0, 70, padding=0)
+        #self.ui.graphicsView_2.setYRange(0, 70, padding=0)
+        #self.ui.graphicsView_3.setXRange(0, 70, padding=0)
+        #self.ui.graphicsView_3.setYRange(0, 70, padding=0)
+        #self.ui.graphicsView_4.setXRange(0, 70, padding=0)
+        #self.ui.graphicsView_4.setYRange(0, 70, padding=0)
+        for i in np.arange(1,int(self._asics/2)+1):
+            getattr(self.ui, f'graphicsView_{i}').setXRange(0, 70, padding=0) 
+            getattr(self.ui, f'graphicsView_{i}').setYRange(0, 70, padding=0) 
 
     def updatePlots(self):
         #print('Update the plots ...\n')
