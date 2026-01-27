@@ -11,7 +11,7 @@ import pyqtgraph as pg
 from pydm.widgets import PyDMLineEdit, PyDMLabel, PyDMImageView
 from qtpy.QtWidgets import QWidget, QLabel, QGridLayout, QVBoxLayout, QSpacerItem, QSizePolicy
 
-def runChannelDisplay(dataReceiver, serverList='localhost:9090', root=None,
+def runChannelDisplay(dataReceiver,serverList='localhost:9090',port='9090',root=None,
                    title=None,sizeX=800,sizeY=1000,maxListExpand=5,maxListSize=100):
 
     #pyrogue.pydm.runPyDM()
@@ -42,6 +42,7 @@ def runChannelDisplay(dataReceiver, serverList='localhost:9090', root=None,
     macrosA['title'] = title
     macrosA['sizeX'] = sizeX
     macrosA['sizeY'] = sizeY
+    macrosA['port']  = port
     app = pydm.PyDMApplication(ui_file=ui,
                                command_line_args=args,
                                macros=macrosA,
@@ -62,8 +63,19 @@ class assertGUIChannelMonitoring(pydm.Display):
         self.init_colorbar()
         self.init_crosshair()
         self.setup_main_tab()
+        self.connect_rogue_root()
         self.set_image_channels()
         self.enable_mouse_cursor()
+        
+    def connect_rogue_root(self):
+        with pr.interfaces.VirtualClient(addr="localhost",port=int(self._port)) as client:
+        
+           # Get the reference to the root node
+           self._root = client.root
+        
+           # Get a variable value with a read, this returns the native value
+           ret = self._root.RogueVersion.get()
+           #print(f"Version = {ret}")
 
     def init_colorbar(self):
         for i in np.arange(1,self._asics+1):
@@ -222,15 +234,26 @@ class assertGUIChannelMonitoring(pydm.Display):
         self.ui.PyDMLineEdit_7.setText(str(sensor))
         
         self.update_channel_timeplot(sensor,x)
+        self.update_channel_histogram(sensor,x)
         self.update_all_channels_plot(sensor)
-    
+
     def update_channel_timeplot(self, sensor, channel):
         self.ui.PyDMWaveformPlot_1.clearCurves()
-        self.ui.PyDMWaveformPlot_1.addChannel(y_channel = f'{self._dataReceiver}.ASIC{sensor-1}CntHist{channel}',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts") 
+        self.ui.PyDMWaveformPlot_1.addChannel(y_channel = f'{self._dataReceiver}.ASIC{sensor-1}CntHist{channel}',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts")
 
-    def update_all_channels_plot(self, sensor):
+    def update_channel_histogram(self, sensor, channel):
+        bin_start = int(self.ui.PyDMLineEdit_8.text())
+        bin_stop  = int(self.ui.PyDMLineEdit_9.text())
+        num_bins  = int(self.ui.PyDMLineEdit_10.text())
+        y, x = np.histogram(vals, bins=np.linspace(bin_start, bin_stop, num_bins))
+        self._root.AsicSampleProcessor.Bins.set(x, write = True)
+        self._root.AsicSampleProcessor.Frequencies.set(y, write = True)
         self.ui.PyDMWaveformPlot_2.clearCurves()
-        self.ui.PyDMWaveformPlot_2.addChannel(y_channel = f'{self._dataReceiver}.ASIC{sensor-1}Sig',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts") 
+        self.ui.PyDMWaveformPlot_2.addChannel(y_channel = f'{self._dataReceiver}.Frequencies',x_channel = f'{self._dataReceiver}.Bins',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "Frequencies",xAxisName = "Bins (counts)") 
+    
+    def update_all_channels_plot(self, sensor):
+        self.ui.PyDMWaveformPlot_3.clearCurves()
+        self.ui.PyDMWaveformPlot_3.addChannel(y_channel = f'{self._dataReceiver}.ASIC{sensor-1}Sig',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts") 
  
     def ui_filename(self):
         # Point to the UI file
