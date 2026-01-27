@@ -47,7 +47,7 @@ def runBeamDisplay(dataReceiver,serverList='localhost:9090',port='9090',root=Non
     macrosA['title'] = title
     macrosA['sizeX'] = sizeX
     macrosA['sizeY'] = sizeY
-    macrosA['port']  = port
+    macrosA['port' ] = port
     app = pydm.PyDMApplication(ui_file=ui,
                                command_line_args=args,
                                macros=macrosA,
@@ -78,7 +78,7 @@ class assertGUIBeamGeometry(pydm.Display):
            self._root = client.root
         
            # Get a variable value with a read, this returns the native value
-           ret = self._root.RogueVersion.get()
+           #ret = self._root.RogueVersion.get()
            #print(f"Version = {ret}")
        
     def setup_plots(self):

@@ -58,6 +58,6 @@ elif args.cmd == 'particle':
 elif args.cmd == 'beam':
     runBeamDisplay(dataReceiver=args.dataReceiver, serverList=args.serverList, title=args.title, sizeY=args.sizeY, sizeX=args.sizeX, port=args.port)
 elif args.cmd == 'channel':
-    runChannelDisplay(dataReceiver=args.dataReceiver, serverList=args.serverList, title=args.title, sizeY=args.sizeY, sizeX=args.sizeX)
+    runChannelDisplay(dataReceiver=args.dataReceiver, serverList=args.serverList, title=args.title, sizeY=args.sizeY, sizeX=args.sizeX, port=args.port)
 elif args.cmd == 'trajectory':
     pass
