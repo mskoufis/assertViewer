@@ -486,6 +486,9 @@
              <property name="text">
               <string>2000</string>
              </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
             </widget>
            </item>
            <item row="6" column="3">
@@ -496,6 +499,9 @@
              <property name="text">
               <string>4000</string>
              </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
             </widget>
            </item>
            <item row="7" column="3">
@@ -505,6 +511,9 @@
              </property>
              <property name="text">
               <string>100</string>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
