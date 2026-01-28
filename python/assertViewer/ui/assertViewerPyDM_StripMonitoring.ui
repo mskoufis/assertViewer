@@ -307,7 +307,7 @@
            <item row="1" column="0">
             <widget class="QLabel" name="label_11">
              <property name="text">
-              <string>Stripline Index</string>
+              <string>Channel Index</string>
              </property>
             </widget>
            </item>
