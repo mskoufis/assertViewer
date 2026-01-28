@@ -82,11 +82,6 @@ class assertGUI(pydm.Display):
         self.ui.PyDMCheckbox_pedestals.clicked.connect(self.onClick_updatePlots)
         self.ui.PyDMCheckbox_cm.clicked.connect(self.onClick_updatePlots)
 
-    def get_attribute_dynamically(self, attribute_name):
-        # Accessing an instance variable dynamically
-        instance_attr = getattr(self, attribute_name, "Attribute not found")
-        return instance_attr
-
     def onClick_updatePlots(self):
 
         self.resetPlots()

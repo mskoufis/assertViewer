@@ -199,11 +199,6 @@ class assertGUIParticleMonitoring(pydm.Display):
         self.ui.PyDMCheckbox_LET.setChecked(True)
         self.updatePlots()
 
-    def get_attribute_dynamically(self, attribute_name):
-        # Accessing an instance variable dynamically
-        instance_attr = getattr(self, attribute_name, "Attribute not found")
-        return instance_attr
-
     def update_asic_photons(self):
         # Get Rogue ADC counts
         counts1 = self._root.AsicSampleProcessor.ASIC0Sig.get()

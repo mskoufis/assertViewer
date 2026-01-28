@@ -165,11 +165,6 @@ class assertGUIChannelMonitoring(pydm.Display):
         for i in np.arange(1,self._asics+1):
             getattr(self.ui, f'PyDMImageView_{i}').scene.sigMouseClicked.connect(getattr(self, f'clickProcessImage{i}'))
 
-    def get_attribute_dynamically(self, attribute_name):
-        # Accessing an instance variable dynamically
-        instance_attr = getattr(self, attribute_name, "Attribute not found")
-        return instance_attr
-
     def updateColorMapLimits(self):
         #minContrast = int(self.ui.PyDMLineEdit_2.displayText())
         #maxContrast = int(self.ui.PyDMLineEdit_3.displayText())
