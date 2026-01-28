@@ -133,7 +133,7 @@ class assertGUIChannelMonitoring(pydm.Display):
         #self.ui.PyDMImageView_6.setImageChannel(f"{self._dataReceiver}.ASIC5Image")
         #self.ui.PyDMImageView_7.setImageChannel(f"{self._dataReceiver}.ASIC6Image")
         #self.ui.PyDMImageView_8.setImageChannel(f"{self._dataReceiver}.ASIC7Image")
-
+        self.updateColorMapLimits()
         for i in np.arange(1,self._asics+1):
             getattr(self.ui, f'PyDMImageView_{i}').setImageChannel(f'{self._dataReceiver}.ASIC{i-1}Image')
 
@@ -159,8 +159,10 @@ class assertGUIChannelMonitoring(pydm.Display):
         return instance_attr
 
     def updateColorMapLimits(self):
-        minContrast = int(self.ui.PyDMLineEdit_2.displayText())
-        maxContrast = int(self.ui.PyDMLineEdit_3.displayText())
+        #minContrast = int(self.ui.PyDMLineEdit_2.displayText())
+        #maxContrast = int(self.ui.PyDMLineEdit_3.displayText())
+        minContrast = int(self.ui.PyDMLineEdit_2.text())
+        maxContrast = int(self.ui.PyDMLineEdit_3.text())
         #self.ui.PyDMImageView_1.setColorMapLimits(minContrast, maxContrast)
         #self.ui.PyDMImageView_2.setColorMapLimits(minContrast, maxContrast)
         #self.ui.PyDMImageView_3.setColorMapLimits(minContrast, maxContrast)
@@ -174,7 +176,8 @@ class assertGUIChannelMonitoring(pydm.Display):
             getattr(self.ui, f'PyDMImageView_{i}').setColorMapLimits(minContrast, maxContrast)
 
         for i in np.arange(1,self._asics+1):
-            getattr(self, f'self.colorbar_{i}').setLevels(values=(int(self.ui.PyDMLineEdit_2.text()), int(self.ui.PyDMLineEdit_3.text())))
+            #getattr(self, f'self.colorbar_{i}').setLevels(values=(int(self.ui.PyDMLineEdit_2.text()), int(self.ui.PyDMLineEdit_3.text())))
+            getattr(self, f'self.colorbar_{i}').setLevels(values=(minContrast, maxContrast))
 
     def updateDisplay(self):
         #self.ui.PyDMImageView_1.redrawImage()
@@ -185,6 +188,7 @@ class assertGUIChannelMonitoring(pydm.Display):
         #self.ui.PyDMImageView_6.redrawImage()
         #self.ui.PyDMImageView_7.redrawImage()
         #self.ui.PyDMImageView_8.redrawImage()
+        self.updateColorMapLimits()
         for i in np.arange(1,self._asics+1):
             getattr(self.ui, f'PyDMImageView_{i}').redrawImage()
 
@@ -251,10 +255,14 @@ class assertGUIChannelMonitoring(pydm.Display):
         num_bins  = int(self.ui.PyDMLineEdit_10.text())
         vals = getattr(self._root.AsicSampleProcessor, f'ASIC{sensor-1}CntHist{channel}').get()
         y, x = np.histogram(vals, bins=np.linspace(bin_start, bin_stop, num_bins))
+        self._root.AsicSampleProcessor.BinsStart.set(bin_start, write = True)
+        self._root.AsicSampleProcessor.BinsStop.set(bin_stop, write = True)
+        self._root.AsicSampleProcessor.NumBins.set(num_bins, write = True)
         self._root.AsicSampleProcessor.Bins.set(x, write = True)
         self._root.AsicSampleProcessor.Frequencies.set(y, write = True)
         self.ui.PyDMWaveformPlot_2.clearCurves()
-        self.ui.PyDMWaveformPlot_2.addChannel(y_channel = f'{self._dataReceiver}.Frequencies',x_channel = f'{self._dataReceiver}.Bins',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "Frequencies") 
+        self.ui.PyDMWaveformPlot_2.addChannel(y_channel = f'{self._dataReceiver}.Frequencies',x_channel = f'{self._dataReceiver}.Bins',plot_style = "Bar",color = "orange",barWidth = 3,yAxisName = "Frequencies") 
+
     def update_all_channels_plot(self, sensor):
         self.ui.PyDMWaveformPlot_3.clearCurves()
         self.ui.PyDMWaveformPlot_3.addChannel(y_channel = f'{self._dataReceiver}.ASIC{sensor-1}Sig',x_channel = f'{self._dataReceiver}.IndexChannels',plot_style = "Line",color = "orange",lineWidth = 3,yAxisName = "ADC Counts") 
