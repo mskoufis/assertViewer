@@ -271,54 +271,43 @@
         <layout class="QGridLayout" name="gridLayout_4">
          <item row="0" column="0">
           <layout class="QGridLayout" name="gridLayout_3">
-           <item row="2" column="3">
-            <widget class="PyDMLineEdit" name="PyDMLineEdit_5">
+           <item row="1" column="1">
+            <widget class="PyDMLineEdit" name="PyDMLineEdit_6">
+             <property name="toolTip">
+              <string/>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="PyDMLineEdit" name="PyDMLineEdit_3">
              <property name="toolTip">
               <string/>
              </property>
              <property name="text">
               <string>4000</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="PyDMLineEdit" name="PyDMLineEdit_4">
+             <property name="toolTip">
+              <string/>
+             </property>
+             <property name="text">
+              <string>0</string>
              </property>
              <property name="readOnly">
               <bool>true</bool>
              </property>
             </widget>
            </item>
-           <item row="4" column="3">
-            <widget class="PyDMLineEdit" name="PyDMLineEdit_9">
-             <property name="toolTip">
-              <string/>
-             </property>
-             <property name="text">
-              <string>4000</string>
-             </property>
-            </widget>
-           </item>
            <item row="1" column="0">
-            <widget class="QLabel" name="label_1">
-             <property name="text">
-              <string>Min Contrast</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="2">
-            <widget class="QLabel" name="label_13">
-             <property name="text">
-              <string>Min Contrast  (RBV)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0">
             <widget class="QLabel" name="label_11">
              <property name="text">
               <string>Stripline Index</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="2">
-            <widget class="QLabel" name="label_14">
-             <property name="text">
-              <string>Max Contrast (RBV)</string>
              </property>
             </widget>
            </item>
@@ -335,94 +324,16 @@
              </property>
             </widget>
            </item>
-           <item row="1" column="1">
-            <widget class="PyDMLineEdit" name="PyDMLineEdit_2">
-             <property name="toolTip">
-              <string/>
-             </property>
-             <property name="text">
-              <string>0</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="2">
-            <widget class="QLabel" name="label_12">
-             <property name="text">
-              <string>Sensor Plane</string>
-             </property>
-            </widget>
-           </item>
            <item row="3" column="3">
-            <widget class="PyDMLineEdit" name="PyDMLineEdit_7">
-             <property name="toolTip">
-              <string/>
-             </property>
-             <property name="text">
-              <string>1</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="label_2">
-             <property name="text">
-              <string>Max Contrast</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="PyDMLineEdit" name="PyDMLineEdit_3">
+            <widget class="PyDMLineEdit" name="PyDMLineEdit_5">
              <property name="toolTip">
               <string/>
              </property>
              <property name="text">
               <string>4000</string>
              </property>
-            </widget>
-           </item>
-           <item row="0" column="3">
-            <widget class="QPushButton" name="pushButton">
-             <property name="text">
-              <string>Update Images</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="1">
-            <widget class="PyDMLineEdit" name="PyDMLineEdit_8">
-             <property name="toolTip">
-              <string/>
-             </property>
-             <property name="text">
-              <string>2000</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="1">
-            <widget class="PyDMLineEdit" name="PyDMLineEdit_6">
-             <property name="toolTip">
-              <string/>
-             </property>
-             <property name="text">
-              <string>0</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="3">
-            <widget class="PyDMLineEdit" name="PyDMLineEdit_4">
-             <property name="toolTip">
-              <string/>
-             </property>
-             <property name="text">
-              <string>0</string>
-             </property>
              <property name="readOnly">
               <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="0">
-            <widget class="QLabel" name="label_15">
-             <property name="text">
-              <string>Bins Start</string>
              </property>
             </widget>
            </item>
@@ -433,22 +344,162 @@
              </property>
             </widget>
            </item>
-           <item row="4" column="2">
-            <widget class="QLabel" name="label_17">
+           <item row="2" column="1">
+            <widget class="PyDMLineEdit" name="PyDMLineEdit_2">
+             <property name="toolTip">
+              <string/>
+             </property>
              <property name="text">
-              <string>Bins End</string>
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QLabel" name="label_13">
+             <property name="text">
+              <string>Min Contrast  (RBV)</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QPushButton" name="pushButton">
+             <property name="text">
+              <string>Update Images</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QLabel" name="label_14">
+             <property name="text">
+              <string>Max Contrast (RBV)</string>
              </property>
             </widget>
            </item>
            <item row="5" column="0">
-            <widget class="QLabel" name="label_16">
+            <widget class="QLabel" name="label_15">
              <property name="text">
-              <string>Number of Bins</string>
+              <string>Bins Start</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_1">
+             <property name="text">
+              <string>Min Contrast</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>Max Contrast</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QLabel" name="label_12">
+             <property name="text">
+              <string>Sensor Plane</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="PyDMLineEdit" name="PyDMLineEdit_7">
+             <property name="toolTip">
+              <string/>
+             </property>
+             <property name="text">
+              <string>1</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1">
+            <widget class="PyDMLineEdit" name="PyDMLineEdit_10">
+             <property name="toolTip">
+              <string/>
+             </property>
+             <property name="text">
+              <string>100</string>
              </property>
             </widget>
            </item>
            <item row="5" column="1">
-            <widget class="PyDMLineEdit" name="PyDMLineEdit_10">
+            <widget class="PyDMLineEdit" name="PyDMLineEdit_8">
+             <property name="toolTip">
+              <string/>
+             </property>
+             <property name="text">
+              <string>2000</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="label_16">
+             <property name="text">
+              <string>Number Of Bins</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="label_17">
+             <property name="text">
+              <string>Bins Stop</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="PyDMLineEdit" name="PyDMLineEdit_9">
+             <property name="toolTip">
+              <string/>
+             </property>
+             <property name="text">
+              <string>4000</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="2">
+            <widget class="QLabel" name="label_18">
+             <property name="text">
+              <string>Bins Start (RBV)</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="2">
+            <widget class="QLabel" name="label_19">
+             <property name="text">
+              <string>Bins Stop (RBV)</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="2">
+            <widget class="QLabel" name="label_20">
+             <property name="text">
+              <string>Number Of Bins (RBV)</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="3">
+            <widget class="PyDMLineEdit" name="PyDMLineEdit_11">
+             <property name="toolTip">
+              <string/>
+             </property>
+             <property name="text">
+              <string>2000</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="3">
+            <widget class="PyDMLineEdit" name="PyDMLineEdit_12">
+             <property name="toolTip">
+              <string/>
+             </property>
+             <property name="text">
+              <string>4000</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="3">
+            <widget class="PyDMLineEdit" name="PyDMLineEdit_13">
              <property name="toolTip">
               <string/>
              </property>
