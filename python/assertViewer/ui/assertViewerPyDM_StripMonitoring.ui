@@ -25,7 +25,7 @@
         </size>
        </property>
        <property name="text">
-        <string>Sensor Plane 1 - Channels vs. Frames</string>
+        <string>Sensor Plane 1 - Y: Channels, X: Memory Frames</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -41,7 +41,7 @@
         </size>
        </property>
        <property name="text">
-        <string>Sensor Plane 8  - Channels vs. Frames</string>
+        <string>Sensor Plane 8  - Y: Channels, X: Memory Frames</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -108,7 +108,7 @@
        </property>
        <property name="xLabels">
         <stringlist>
-         <string>Channel Index</string>
+         <string>Channel</string>
         </stringlist>
        </property>
        <property name="showLegend">
@@ -201,7 +201,7 @@
         </size>
        </property>
        <property name="text">
-        <string>Sensor Plane 4  - Channels vs. Frames</string>
+        <string>Sensor Plane 4  - Y: Channels, X: Memory Frames</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -236,7 +236,7 @@
         </size>
        </property>
        <property name="text">
-        <string>Sensor Plane 5 -  Channels vs. Frames</string>
+        <string>Sensor Plane 5 -  Y: Channels, X: Memory Frames</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -252,7 +252,7 @@
         </size>
        </property>
        <property name="text">
-        <string>Sensor Plane 2  - Channels vs. Frames</string>
+        <string>Sensor Plane 2  - Y: Channels, X: Memory Frames</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -544,7 +544,7 @@
            <item row="1" column="4">
             <widget class="QLabel" name="label_21">
              <property name="text">
-              <string>Frame</string>
+              <string>Memory Frame</string>
              </property>
             </widget>
            </item>
@@ -563,7 +563,7 @@
         </size>
        </property>
        <property name="text">
-        <string>Sensor Plane 6  - Channels vs. Frames</string>
+        <string>Sensor Plane 6  - Y: Channels, X: Memory Frames</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -579,7 +579,7 @@
         </size>
        </property>
        <property name="text">
-        <string>Sensor Plane 7  - Channels vs. Frames</string>
+        <string>Sensor Plane 7  - Y: Channels, X: Memory Frames</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -608,7 +608,7 @@
        </property>
        <property name="xLabels">
         <stringlist>
-         <string>Triggers</string>
+         <string>Trigger</string>
         </stringlist>
        </property>
        <property name="showLegend">
@@ -625,7 +625,7 @@
         </size>
        </property>
        <property name="text">
-        <string>Sensor Plane 3  - Channels vs. Frames</string>
+        <string>Sensor Plane 3  - Y: Channels, X: Memory Frames</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -673,7 +673,7 @@
        </property>
        <property name="xLabels">
         <stringlist>
-         <string>Bins</string>
+         <string>Bin</string>
         </stringlist>
        </property>
        <property name="showLegend">
