@@ -62,6 +62,7 @@ class assertGUIChannelMonitoring(pydm.Display):
         self.sizeX = macros['sizeX']
         self.sizeY = macros['sizeY']
         self._asics = 8
+        self._frames = 32
         self._channels = 64
         self._port = macros['port']
         self.connect_rogue_root()
@@ -106,7 +107,7 @@ class assertGUIChannelMonitoring(pydm.Display):
             getattr(self, f'_v_line_img{i}').hide()
             getattr(self, f'_h_line_img{i}').hide()
 
-    def update_crosshair(self, x, y=20, sensor=1):
+    def update_crosshair(self, x, y, sensor=1):
         getattr(self, f'_v_line_img{sensor}').setPos(x)
         getattr(self, f'_h_line_img{sensor}').setPos(y)
         getattr(self, f'_v_line_img{sensor}').show()
@@ -148,7 +149,7 @@ class assertGUIChannelMonitoring(pydm.Display):
         #self.ui.PyDMImageView_8.setImageChannel(f"{self._dataReceiver}.ASIC7Image")
         self.updateColorMapLimits()
         for i in np.arange(1,self._asics+1):
-            getattr(self.ui, f'PyDMImageView_{i}').setImageChannel(f'{self._dataReceiver}.ASIC{i-1}Image')
+            getattr(self.ui, f'PyDMImageView_{i}').setImageChannel(f'{self._dataReceiver}.ASIC{i-1}MemFrame')
 
         self.ui.pushButton.clicked.connect(self.updateDisplay)
 
@@ -235,17 +236,24 @@ class assertGUIChannelMonitoring(pydm.Display):
         self.perform_error_checking(pos, 8)
 
     def perform_error_checking(self, pos, sensor):
-        if int(pos.x()) >= self._channels:
-            x = self._channels - 1
+        if int(pos.x()) >= self._frames:
+            x = self._frames - 1
         elif int(pos.x()) < 0:
             x = 0
         else:
             x = int(pos.x())
 
-        self.clear_crosshair()
-        self.update_crosshair(x,sensor=sensor)
+        if int(pos.y()) >= self._channels:
+            y = self._channels - 1
+        elif int(pos.y()) < 0:
+            y = 0
+        else:
+            y = int(pos.y())
 
-        self.ui.PyDMLineEdit_6.setText(str(x))
+        self.clear_crosshair()
+        self.update_crosshair(x,y,sensor=sensor)
+
+        self.ui.PyDMLineEdit_6.setText(str(y))
         self.ui.PyDMLineEdit_7.setText(str(sensor))
         
         self.update_channel_timeplot(sensor,x)
