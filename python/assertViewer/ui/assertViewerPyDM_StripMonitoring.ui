@@ -59,6 +59,9 @@
        <property name="imageChannel">
         <string/>
        </property>
+       <property name="maxRedrawRate">
+        <number>1</number>
+       </property>
        <property name="showAxes">
         <bool>true</bool>
        </property>
@@ -74,6 +77,9 @@
        </property>
        <property name="imageChannel">
         <string/>
+       </property>
+       <property name="maxRedrawRate">
+        <number>1</number>
        </property>
        <property name="showAxes">
         <bool>true</bool>
@@ -121,6 +127,9 @@
        <property name="imageChannel">
         <string/>
        </property>
+       <property name="maxRedrawRate">
+        <number>1</number>
+       </property>
        <property name="showAxes">
         <bool>true</bool>
        </property>
@@ -136,6 +145,9 @@
        </property>
        <property name="imageChannel">
         <string/>
+       </property>
+       <property name="maxRedrawRate">
+        <number>1</number>
        </property>
        <property name="showAxes">
         <bool>true</bool>
@@ -153,6 +165,9 @@
        <property name="imageChannel">
         <string/>
        </property>
+       <property name="maxRedrawRate">
+        <number>1</number>
+       </property>
        <property name="showAxes">
         <bool>true</bool>
        </property>
@@ -168,6 +183,9 @@
        </property>
        <property name="imageChannel">
         <string/>
+       </property>
+       <property name="maxRedrawRate">
+        <number>1</number>
        </property>
        <property name="showAxes">
         <bool>true</bool>
@@ -200,6 +218,9 @@
        </property>
        <property name="imageChannel">
         <string/>
+       </property>
+       <property name="maxRedrawRate">
+        <number>1</number>
        </property>
        <property name="showAxes">
         <bool>true</bool>
@@ -621,6 +642,9 @@
        </property>
        <property name="imageChannel">
         <string/>
+       </property>
+       <property name="maxRedrawRate">
+        <number>1</number>
        </property>
        <property name="showAxes">
         <bool>true</bool>
