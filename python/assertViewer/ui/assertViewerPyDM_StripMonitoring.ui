@@ -60,7 +60,7 @@
         <string/>
        </property>
        <property name="maxRedrawRate">
-        <number>1</number>
+        <number>30</number>
        </property>
        <property name="showAxes">
         <bool>true</bool>
@@ -79,7 +79,7 @@
         <string/>
        </property>
        <property name="maxRedrawRate">
-        <number>1</number>
+        <number>30</number>
        </property>
        <property name="showAxes">
         <bool>true</bool>
@@ -128,7 +128,7 @@
         <string/>
        </property>
        <property name="maxRedrawRate">
-        <number>1</number>
+        <number>30</number>
        </property>
        <property name="showAxes">
         <bool>true</bool>
@@ -147,7 +147,7 @@
         <string/>
        </property>
        <property name="maxRedrawRate">
-        <number>1</number>
+        <number>30</number>
        </property>
        <property name="showAxes">
         <bool>true</bool>
@@ -166,7 +166,7 @@
         <string/>
        </property>
        <property name="maxRedrawRate">
-        <number>1</number>
+        <number>30</number>
        </property>
        <property name="showAxes">
         <bool>true</bool>
@@ -185,7 +185,7 @@
         <string/>
        </property>
        <property name="maxRedrawRate">
-        <number>1</number>
+        <number>30</number>
        </property>
        <property name="showAxes">
         <bool>true</bool>
@@ -220,7 +220,7 @@
         <string/>
        </property>
        <property name="maxRedrawRate">
-        <number>1</number>
+        <number>30</number>
        </property>
        <property name="showAxes">
         <bool>true</bool>
@@ -644,7 +644,7 @@
         <string/>
        </property>
        <property name="maxRedrawRate">
-        <number>1</number>
+        <number>30</number>
        </property>
        <property name="showAxes">
         <bool>true</bool>
