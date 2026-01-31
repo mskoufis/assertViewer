@@ -1,0 +1,872 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>2139</width>
+    <height>1142</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="3" column="2">
+      <widget class="QLabel" name="label_9">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Sensor Plane 6  - Y: Channels, X: Memory Frames</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Sensor Plane 1 - Y: Channels, X: Memory Frames</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_7">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Sensor Plane 2  - Y: Channels, X: Memory Frames</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="QLabel" name="label_10">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Sensor Plane 8  - Y: Channels, X: Memory Frames</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1" rowspan="3">
+      <widget class="PyDMImageView" name="PyDMImageView_4">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="readingOrder">
+        <enum>PyDMImageView::Clike</enum>
+       </property>
+       <property name="imageChannel">
+        <string/>
+       </property>
+       <property name="maxRedrawRate">
+        <number>30</number>
+       </property>
+       <property name="showAxes">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLabel" name="label_8">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Sensor Plane 4  - Y: Channels, X: Memory Frames</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0" rowspan="3">
+      <widget class="PyDMImageView" name="PyDMImageView_2">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="readingOrder">
+        <enum>PyDMImageView::Clike</enum>
+       </property>
+       <property name="imageChannel">
+        <string/>
+       </property>
+       <property name="maxRedrawRate">
+        <number>30</number>
+       </property>
+       <property name="showAxes">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="label_4">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Sensor Plane 3  - Y: Channels, X: Memory Frames</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1" rowspan="2">
+      <widget class="PyDMImageView" name="PyDMImageView_3">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="readingOrder">
+        <enum>PyDMImageView::Clike</enum>
+       </property>
+       <property name="imageChannel">
+        <string/>
+       </property>
+       <property name="maxRedrawRate">
+        <number>30</number>
+       </property>
+       <property name="showAxes">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QLabel" name="label_6">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Sensor Plane 7  - Y: Channels, X: Memory Frames</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2" rowspan="3">
+      <widget class="PyDMImageView" name="PyDMImageView_6">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="readingOrder">
+        <enum>PyDMImageView::Clike</enum>
+       </property>
+       <property name="imageChannel">
+        <string/>
+       </property>
+       <property name="maxRedrawRate">
+        <number>30</number>
+       </property>
+       <property name="showAxes">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0" rowspan="2">
+      <widget class="PyDMImageView" name="PyDMImageView_1">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="readingOrder">
+        <enum>PyDMImageView::Clike</enum>
+       </property>
+       <property name="imageChannel">
+        <string/>
+       </property>
+       <property name="maxRedrawRate">
+        <number>30</number>
+       </property>
+       <property name="showAxes">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="4">
+      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_3">
+       <property name="maximumSize">
+        <size>
+         <width>750</width>
+         <height>250</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="showXGrid">
+        <bool>true</bool>
+       </property>
+       <property name="showYGrid">
+        <bool>true</bool>
+       </property>
+       <property name="title" stdset="0">
+        <string>Sensor - All Channels</string>
+       </property>
+       <property name="xLabels">
+        <stringlist>
+         <string>Channel</string>
+        </stringlist>
+       </property>
+       <property name="showLegend">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2" rowspan="2">
+      <widget class="PyDMImageView" name="PyDMImageView_5">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="readingOrder">
+        <enum>PyDMImageView::Clike</enum>
+       </property>
+       <property name="imageChannel">
+        <string/>
+       </property>
+       <property name="maxRedrawRate">
+        <number>30</number>
+       </property>
+       <property name="showAxes">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3" rowspan="2">
+      <widget class="PyDMImageView" name="PyDMImageView_7">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="readingOrder">
+        <enum>PyDMImageView::Clike</enum>
+       </property>
+       <property name="imageChannel">
+        <string/>
+       </property>
+       <property name="maxRedrawRate">
+        <number>30</number>
+       </property>
+       <property name="showAxes">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="label_5">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Sensor Plane 5 -  Y: Channels, X: Memory Frames</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="4">
+      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_2">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>750</width>
+         <height>250</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="showXGrid">
+        <bool>true</bool>
+       </property>
+       <property name="showYGrid">
+        <bool>true</bool>
+       </property>
+       <property name="title" stdset="0">
+        <string>Channel - Histogram</string>
+       </property>
+       <property name="xLabels">
+        <stringlist>
+         <string>Bin</string>
+        </stringlist>
+       </property>
+       <property name="showLegend">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="4">
+      <widget class="PyDMWaveformPlot" name="PyDMWaveformPlot_1">
+       <property name="maximumSize">
+        <size>
+         <width>750</width>
+         <height>250</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="showXGrid">
+        <bool>true</bool>
+       </property>
+       <property name="showYGrid">
+        <bool>true</bool>
+       </property>
+       <property name="title" stdset="0">
+        <string>Channel - Count History</string>
+       </property>
+       <property name="xLabels">
+        <stringlist>
+         <string>Trigger</string>
+        </stringlist>
+       </property>
+       <property name="showLegend">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="4" rowspan="2">
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>750</width>
+         <height>200</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>1000</width>
+         <height>1000</height>
+        </size>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="PyDMTabWidget_main">
+        <attribute name="title">
+         <string>Main</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="2" column="0">
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="5" column="0">
+            <widget class="QGroupBox" name="groupBox_2">
+             <property name="title">
+              <string>Colormap Parameters</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_6">
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_2">
+                <property name="text">
+                 <string>Max Contrast</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_1">
+                <property name="text">
+                 <string>Min Contrast</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="3">
+               <widget class="PyDMLineEdit" name="PyDMLineEdit_5">
+                <property name="toolTip">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>4000</string>
+                </property>
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="PyDMLineEdit" name="PyDMLineEdit_2">
+                <property name="toolTip">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="PyDMLineEdit" name="PyDMLineEdit_4">
+                <property name="toolTip">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>0</string>
+                </property>
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="PyDMLineEdit" name="PyDMLineEdit_3">
+                <property name="toolTip">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>4000</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QLabel" name="label_13">
+                <property name="text">
+                 <string>Min Contrast  (RBV)</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="QLabel" name="label_14">
+                <property name="text">
+                 <string>Max Contrast (RBV)</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="9" column="0">
+            <widget class="QGroupBox" name="groupBox">
+             <property name="title">
+              <string>Histogram Parameters</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_5">
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_16">
+                <property name="text">
+                 <string>Number Of Bins</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_17">
+                <property name="text">
+                 <string>Bins Stop</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="QLabel" name="label_19">
+                <property name="text">
+                 <string>Bins Stop (RBV)</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="PyDMLineEdit" name="PyDMLineEdit_10">
+                <property name="toolTip">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>100</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="PyDMLineEdit" name="PyDMLineEdit_9">
+                <property name="toolTip">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>4000</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="PyDMLineEdit" name="PyDMLineEdit_8">
+                <property name="toolTip">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>2000</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_15">
+                <property name="text">
+                 <string>Bins Start</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QLabel" name="label_18">
+                <property name="text">
+                 <string>Bins Start (RBV)</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="2">
+               <widget class="QLabel" name="label_20">
+                <property name="text">
+                 <string>Number Of Bins (RBV)</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="PyDMLineEdit" name="PyDMLineEdit_11">
+                <property name="toolTip">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>2000</string>
+                </property>
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="3">
+               <widget class="PyDMLineEdit" name="PyDMLineEdit_12">
+                <property name="toolTip">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>4000</string>
+                </property>
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="3">
+               <widget class="PyDMLineEdit" name="PyDMLineEdit_13">
+                <property name="toolTip">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>100</string>
+                </property>
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QGroupBox" name="groupBox_3">
+             <property name="title">
+              <string>Display Parameters</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_7">
+              <item row="1" column="1">
+               <widget class="QLabel" name="label_11">
+                <property name="text">
+                 <string>Channel</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="PyDMLineEdit" name="PyDMLineEdit_6">
+                <property name="toolTip">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="PyDMLineEdit" name="PyDMLineEdit_14">
+                <property name="toolTip">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="label_21">
+                <property name="text">
+                 <string>Memory Frame</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLabel" name="label_12">
+                <property name="text">
+                 <string>Sensor Plane</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="2">
+               <widget class="PyDMLineEdit" name="PyDMLineEdit_7">
+                <property name="toolTip">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>1</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QGroupBox" name="groupBox_4">
+             <property name="title">
+              <string>Run Parameters</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_8">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label">
+                <property name="text">
+                 <string>Trigger Count</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="PyDMLineEdit" name="PyDMLineEdit_1">
+                <property name="toolTip">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>N/A</string>
+                </property>
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <spacer name="verticalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="6" column="0">
+            <spacer name="verticalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+     <item row="4" column="3" rowspan="3">
+      <widget class="PyDMImageView" name="PyDMImageView_8">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="readingOrder">
+        <enum>PyDMImageView::Clike</enum>
+       </property>
+       <property name="imageChannel">
+        <string/>
+       </property>
+       <property name="maxRedrawRate">
+        <number>30</number>
+       </property>
+       <property name="showAxes">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PyDMWaveformPlot</class>
+   <extends>QGraphicsView</extends>
+   <header>pydm.widgets.waveformplot</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMImageView</class>
+   <extends>QWidget</extends>
+   <header>pydm.widgets.image</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>pydm.widgets.line_edit</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
